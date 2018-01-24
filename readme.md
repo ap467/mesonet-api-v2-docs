@@ -4,7 +4,9 @@ permalink: /v2/
 layout: default
 ---
 
-[Return home](/)
+<ol class="breadcrumb">
+  <li><a href="/">Return Home</a></li>
+</ol>
 
 Gain access to over 60,000 surface weather stations in the United States and Canada. The SynopticLabs (SL) Mesonet Service is an easy to use REST API that can easily leverage real time and historical data in nearly any application.
 

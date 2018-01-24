@@ -1,5 +1,5 @@
 ---
-title: Mesonet API Documentation
+title: Mesonet API Documentation Home
 permalink: /v2/
 layout: default
 ---

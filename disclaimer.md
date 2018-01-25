@@ -1,6 +1,6 @@
 ---
 title: API and Data Disclaimer
-permalink: /disclaimer
+permalink: /disclaimer/
 layout: default
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Authentication API
-permalink: /v2/auth
+permalink: /v2/auth/
 layout: refdoc
 tagline: Create and manage tokens to access Mesonet APIs.
 ---

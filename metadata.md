@@ -1,6 +1,6 @@
 ---
 title: Metadata API
-permalink: /v2/metadata
+permalink: /v2/metadata/
 layout: refdoc
 tagline: Returns metadata for a station or set of stations
 ---

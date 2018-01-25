@@ -1,6 +1,6 @@
 ---
 title: Latest API
-permalink: /v2/latest
+permalink: /v2/latest/
 layout: refdoc
 tagline: Returns the most recent observation from a station or set of stations
 bannerimage: latest.png

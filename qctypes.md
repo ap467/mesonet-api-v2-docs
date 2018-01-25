@@ -1,6 +1,6 @@
 ---
 title: Quality Control Types API
-permalink: /v2/qctypes
+permalink: /v2/qctypes/
 layout: refdoc
 tagline: Returns details about a quality control (data attribute) flag
 ---

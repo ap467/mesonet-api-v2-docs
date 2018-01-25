@@ -1,4 +1,8 @@
-# API and Data Disclaimer
+---
+title: API and Data Disclaimer
+permalink: /disclaimer
+layout: default
+---
 
 The data provided to Synoptic Data and MesoWest are made available either by accessing open-source data repositories or provided voluntarily to us by government agencies, educational institutions, or commercial firms. These efforts are supported in part by the National Mesonet Program of the National Weather Service. These data are intended to be used by: governmental agencies to protect lives and property, the public for general information, and educational institutions for instructional and research purposes. Other uses of the data from one or more stations may require written approval from the entities that installed the weather sensors. Contact Synoptic Data or the entity providing the data to determine whether written approval may be required.
 

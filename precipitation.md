@@ -1,6 +1,6 @@
 ---
 title: Precipitation API
-permalink: /v2/precipitation
+permalink: /v2/precipitation/
 layout: refdoc
 tagline: Returns derived precipitation for a station or set of stations based on a time span
 ---

@@ -1,6 +1,6 @@
 ---
 title: Variables API
-permalink: /v2/variables
+permalink: /v2/variables/
 layout: refdoc
 tagline: Returns a list of the available variables within the Mesonet APIs
 ---

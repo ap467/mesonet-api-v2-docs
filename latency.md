@@ -1,6 +1,6 @@
 ---
 title: Latency API
-permalink: /v2/latency
+permalink: /v2/latency/
 layout: refdoc
 tagline: Returns transmission latency for a station or set of stations based on a start and end date/time.
 ---

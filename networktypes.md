@@ -1,6 +1,6 @@
 ---
 title: Network Types API
-permalink: /v2/networktypes
+permalink: /v2/networktypes/
 layout: refdoc
 tagline: Returns network category metadata
 ---

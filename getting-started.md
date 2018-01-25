@@ -1,6 +1,6 @@
 ---
 title: Getting Started with the Mesonet APIs
-permalink: /v2/getting-started
+permalink: /v2/getting-started/
 layout: refdoc
 tagline: How to get started
 ---

@@ -1,6 +1,6 @@
 ---
 title: Nearest Time API
-permalink: /v2/auth
+permalink: /v2/nearesttime/
 layout: refdoc
 tagline: Returns the observation closest to the time requested
 bannerimage: latest.png

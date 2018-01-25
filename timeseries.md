@@ -1,6 +1,6 @@
 ---
 title: Time Series API
-permalink: /v2/timeseries
+permalink: /v2/timeseries/
 layout: refdoc
 tagline: Returns data for a station or set of stations based on a time span
 bannerimage: timeseries.png

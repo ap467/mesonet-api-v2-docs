@@ -1,6 +1,6 @@
 ---
 title: Quality Control Segments API
-permalink: /v2/qcsegments
+permalink: /v2/qcsegments/
 layout: refdoc
 tagline: Returns data for a station or set of stations for a time span
 bannerimage: qcsegments.png

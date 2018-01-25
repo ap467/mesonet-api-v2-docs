@@ -8,13 +8,13 @@ tagline: Ways to filter and discover available weather stations
 The following parameters can be used in the following APIs:
 
 * [Time Series API][timeseries-api]
-* [Latest API](./latest)
-* [Nearest Time API](./nearesttime)
-* [Precipitation API](./precipitation)
-* [Metadata API](./metadata)
-* [Latency API](./latency)
-* [Climatology API](./climatology)
-* [QC Segments API](./qcsegments)
+* [Latest API](../latest/)
+* [Nearest Time API](../nearesttime/)
+* [Precipitation API](../precipitation/)
+* [Metadata API](../metadata/)
+* [Latency API](../latency/)
+* [Climatology API](../climatology/)
+* [QC Segments API](../qcsegments/)
 
 **Station Selectors**
 
@@ -39,6 +39,6 @@ These selectors individually or combined to target the desired data.
 
 <!-- Refs and Such -->
 
-[station-selectors]: ./station-selectors
-[timeseries-api]: ./timeseries
-[network-api]: ./networks
+[station-selectors]: ../station-selectors/
+[timeseries-api]: ../timeseries/
+[network-api]: ../networks/

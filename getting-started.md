@@ -287,12 +287,13 @@ We hope this tutorial has been helpful. If you made it this far, then you've got
 
 Some further reading:
 
-* [Station Selectors][./station-selectors]
+* [Station Selectors][station-selectors]
 * [Time Series API][timeseries-api]
 * [Latest API][latest-api]
 
 <!-- Refs and such -->
 
+[station-selectors]: ../station-selectors/
 [auth-api]: ../authentication/
 [csv]: https://en.wikipedia.org/wiki/Comma-separated_values
 [edge-json]: https://www.microsoft.com/en-gb/store/p/json-formatter-for-edge/9nz9d2j86w6s
@@ -300,7 +301,7 @@ Some further reading:
 [json-viewer]: https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?utm_source=chrome-ntp-icon
 [latest-api]: ../latest/
 [metadata-api]: ../metadata/
-[nearesttime-api]: ./nearesttime/
+[nearesttime-api]: ../nearesttime/
 [rest-api]: https://en.wikipedia.org/wiki/Representational_state_transfer
 [sign-up-for-api-key]: https://synopticlabs.org/api/signup/
 [timeseries-api]: ../timeseries/

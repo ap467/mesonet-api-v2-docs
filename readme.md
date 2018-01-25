@@ -50,21 +50,21 @@ You can read more in our [Getting Started][getting-started] guide.
 
 <!-- Refs and Such -->
 
-[getting-started]: ./getting-started
+[getting-started]: ./getting-started/
 [rest-api]: https://en.wikipedia.org/wiki/Representational_state_transfer
-[timeseries-api]: ./timeseries
-[latest-api]: ./latest
-[getting-started]: ./getting-started
-[authentication-api]: ./auth
-[metadata-api]: ./metadata
-[nearesttime-api]: ./nearesttime
-[precipitation-api]: ./precipitation
-[latency-api]: ./latency
-[qc-types-api]: ./qctypes
-[variables-api]: ./variables
-[networks-api]: ./networks
-[networktypes-api]: ./networktypes
-[qcsegments-api]: ./qcsegments
+[timeseries-api]: ./timeseries/
+[latest-api]: ./latest/
+[getting-started]: ./getting-started/
+[authentication-api]: ./auth/
+[metadata-api]: ./metadata/
+[nearesttime-api]: ./nearesttime/
+[precipitation-api]: ./precipitation/
+[latency-api]: ./latency/
+[qc-types-api]: ./qctypes/
+[variables-api]: ./variables/
+[networks-api]: ./networks/
+[networktypes-api]: ./networktypes/
+[qcsegments-api]: ./qcsegments/
 [mesowest]: https://mesowest.utah.edu
 [uutah]: https://www.utah.edu
 [synoptic]: https://synopticlabs.org

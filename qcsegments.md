@@ -169,12 +169,12 @@ An example request response in JSON would be:
 
 <!-- References & URLs -->
 
-[station-selectors]: ./station-selectors
-[timeseries-api]: ./timeseries
-[network-api]: ./networks
+[station-selectors]: ../station-selectors/
+[timeseries-api]: ../timeseries/
+[network-api]: ../networks/
 [epoch-seconds]: https://en.wikipedia.org/wiki/Unix_time
 [iso-8601]: https://en.wikipedia.org/wiki/ISO_8601
 [json]: http://json.org/
 [sl-range-check]: https://synopticlabs.org/api/mesonet/reference/qc/#Range_check
 [strftime]: http://man7.org/linux/man-pages/man3/strftime.3.html
-[qctypes-api]: ./qctypes
+[qctypes-api]: ../qctypes/

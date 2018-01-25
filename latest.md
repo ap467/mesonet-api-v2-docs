@@ -159,8 +159,8 @@ An example request response in JSON would be:
 
 <!-- References & URLs -->
 
-[station-selectors]: ./station-selectors
-[network-api]: ./networks
+[station-selectors]: ../station-selectors/
+[network-api]: ../networks/
 [epoch-seconds]: https://en.wikipedia.org/wiki/Unix_time
 [iso-8601]: https://en.wikipedia.org/wiki/ISO_8601
 [json]: http://json.org/

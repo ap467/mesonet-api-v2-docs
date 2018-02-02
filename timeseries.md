@@ -45,6 +45,8 @@ Acquiring data from this web service requires certain parameters. When encoding 
   * `alti` (pa, inhg), Altimeter: Pascals, inches mercury.
 
   Furthermore, it is possible to modify one of the preset settings (metric/english). This is achieved by appending a variable group and unit to the parameter string with a comma. For example, to use "english" units with altimeter in inHg the parameter would be `units=english,alti, inhg`.
+  
+* `precip` (1, 0), Enable derived precip. All raw precip variables will be replaced with two new variables called `precip_interval_set_x` and `precip_accum_set_x`. Example: `precip=1`.
 
 The following example request all the stations in Utah with an observation within the last two hours:
 

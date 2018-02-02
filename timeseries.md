@@ -128,7 +128,7 @@ An example request response in JSON would be:
     "LONGITUDE": "-111.96503",
     "LATITUDE": "40.77069",
     "TIMEZONE": "America/Denver",
-    "ID": "53"
+    "ID": "53",
     "STATE": "UT",
     "PERIOD_OF_RECORD": {
       "start": "1970-01-01T00:00:00Z",

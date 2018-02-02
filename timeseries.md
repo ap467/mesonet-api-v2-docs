@@ -81,19 +81,19 @@ By default, the API does not return data that has been flagged as non-plausible 
 
 If the `qc` parameter is omitted then the API will return data while assuming the following QC parameters: `qc=on`, `qc_remove_data=on`, `qc_flags=off` and `qc_checks=sl_range_check`. Below is an explanation of parameters that control the application of data checks (qc) to the data.
 
-* `qc` ("on, off"), Indicates the application behavior of the data check (qc) attributes on the data requested. If set to "off" then all data will be returned _without data checks and quality control_ (this is not recommended). It is possible to target a particular SynopticLabs data check or ask for the entire SynopticLabs test suite, i.e. `qc=on`. Regardless if any data checks are returned, a `QC_FLAGGED: [bool]` key will appear in the JSON response inside each `STATION` element. Data checks will be in a key titled QC.
+* `qc` (on, off), Indicates the application behavior of the data check (qc) attributes on the data requested. If set to "off" then all data will be returned _without data checks and quality control_ (this is not recommended). It is possible to target a particular SynopticLabs data check or ask for the entire SynopticLabs test suite, i.e. `qc=on`. Regardless if any data checks are returned, a `QC_FLAGGED: [bool]` key will appear in the JSON response inside each `STATION` element. Data checks will be in a key titled QC.
 
   > Note: The existence of a data check flag for an observation is not necessarily an indication of invalid or inaccurate data. For a detailed explanation how to apply data checks and how to leverage them, please [click here][qc-indepth] to read more.
 
-* `qc_remove_data` ("on, off, mark"), Indicates the response behavior for an observation that fails a user specified data check.
+* `qc_remove_data` (on, off, mark), Indicates the response behavior for an observation that fails a user specified data check.
 
   * "off" returns the data values even if a data check failure is present for that data.
   * "on" removes failed data values with a "null".
   * "mark" replaces failed data with a value of "false".
 
-* `qc_flags` ("on, off") Indicates whether the data checks are returned alongside any data that failed a requested check. If "on" then the data checks will be returned in the `STATION[n].QC.sensor_name` block.
+* `qc_flags` (on, off) Indicates whether the data checks are returned alongside any data that failed a requested check. If "on" then the data checks will be returned in the `STATION[n].QC.sensor_name` block.
 
-* `qc_checks` ("[flag name], [flag source], all") defines a list of data checks applied to data values. The settings of other qc parameters determines how the data and data checks are returned.
+* `qc_checks` ([flag name], [flag source], all) defines a list of data checks applied to data values. The settings of other qc parameters determines how the data and data checks are returned.
 
   * "all" will return any data check in our system.
   * "flag name" allows the targeting of a flag by name or a list (comma separated) of flags.
@@ -112,55 +112,55 @@ The Time Series service will return its results in a single organized and self d
 
 An example request response in JSON would be:
 
-```
+```json
 {
-  UNITS: {
-    air_temp: "Celsius"
+  "UNITS": {
+    "air_temp": "Celsius"
   },
-  QC_SUMMARY: {
-    QC_TESTS_APPLIED: ["sl_range_check"],
-    TOTAL_OBSERVATIONS_FLAGGED: 0,
-    PERCENT_OF_TOTAL_OBSERVATIONS_FLAGGED: 0
+  "QC_SUMMARY": {
+    "QC_TESTS_APPLIED": ["sl_range_check"],
+    "TOTAL_OBSERVATIONS_FLAGGED": 0,
+    "PERCENT_OF_TOTAL_OBSERVATIONS_FLAGGED": 0
   },
-  STATION: [{
-    STATUS: "ACTIVE",
-    MNET_ID: "1",
-    LONGITUDE: "-111.96503",
-    LATITUDE: "40.77069",
-    TIMEZONE: "America/Denver",
-    ID: "53"
-    STATE: "UT",
-    PERIOD_OF_RECORD: {
-      start: "1970-01-01T00:00:00Z",
-      end: "2017-06-22T18:20:00Z"
+  "STATION": [{
+    "STATUS": "ACTIVE",
+    "MNET_ID": "1",
+    "LONGITUDE": "-111.96503",
+    "LATITUDE": "40.77069",
+    "TIMEZONE": "America/Denver",
+    "ID": "53"
+    "STATE": "UT",
+    "PERIOD_OF_RECORD": {
+      "start": "1970-01-01T00:00:00Z",
+      "end": "2017-06-22T18:20:00Z"
     },
-    ELEVATION: "4226",
-    NAME: "Salt Lake City, Salt Lake City International Airport",
-    QC_FLAGGED: false,
-    STID: "KSLC",
-    SENSOR_VARIABLES: {
-        date_time: { date_time: { } },
-        air_temp: {
-            air_temp_set_1: {
-                position: ""
+    "ELEVATION": "4226",
+    "NAME": "Salt Lake City, Salt Lake City International Airport",
+    "QC_FLAGGED": false,
+    "STID": "KSLC",
+    "SENSOR_VARIABLES": {
+        "date_time": { "date_time": { } },
+        "air_temp": {
+            "air_temp_set_1": {
+                "position": ""
             }
         }
     },
-    OBSERVATIONS: {
-      date_time: [
+    "OBSERVATIONS": {
+      "date_time": [
         "2015-01-03T00:00:00Z", "2015-01-03T00:05:00Z", "2015-01-03T00:10:00Z",
         "2015-01-03T00:15:00Z", "2015-01-03T00:20:00Z",
       ],
-      air_temp_set_1: [
+      "air_temp_set_1": [
         -5.6, -5.6, -6.1, -6.1, -6.7,
       ]
     },
   }],
-  SUMMARY: {
-    RESPONSE_CODE: 1,
-    RESPONSE_MESSAGE: "OK",
-    TOTAL_DATA_TIME: "12.0379924774 ms",
-    NUMBER_OF_OBJECTS: 1,
+  "SUMMARY": {
+    "RESPONSE_CODE": 1,
+    "RESPONSE_MESSAGE": "OK",
+    "TOTAL_DATA_TIME": "12.0379924774 ms",
+    "NUMBER_OF_OBJECTS": 1,
   }
 }
 ```

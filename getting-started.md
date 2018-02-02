@@ -39,11 +39,9 @@ https://api.synopticdata.com/v2/auth?apikey=YOUR_API_KEY
 
 At this point you should see a response that looks similar the response below. You will need to copy this token somewhere, as we are going to use it throughout the following examples.
 
-```
+```json
 {
-  TOKENS: [
-    "a6a82dddc14a46c892077bded6f5a3d6"
-    ]
+  "TOKENS": ["a6a82dddc14a46c892077bded6f5a3d6"]
 }
 ```
 
@@ -93,101 +91,76 @@ Every non CSV request to a Mesonet API will yield a response with at a minimum a
 http://api.synopticdata.com/v2/stations/timeseries?stid=mtmet&start=201701030830&end=201701030930&vars=air_temp,volt&token=YOUR_TOKEN_HERE
 ```
 
-```
+```json
 {
-  UNITS: {
-    position: "ft",               // Describes units found in this response
-    air_temp: "Celsius",
-    elevation: "ft",
-    volt: "volts"
+  "UNITS": {
+    "position": "ft",
+    "air_temp": "Celsius",
+    "elevation": "ft",
+    "volt": "volts"
   },
-  QC_SUMMARY: {                   // Provides information about Quality Control
-    QC_TESTS_APPLIED: [
-      "sl_range_check"
-    ],
-    TOTAL_OBSERVATIONS_FLAGGED: 0,
-    PERCENT_OF_TOTAL_OBSERVATIONS_FLAGGED: 0
+  "QC_SUMMARY": {
+    "QC_TESTS_APPLIED": ["sl_range_check"],
+    "TOTAL_OBSERVATIONS_FLAGGED": 0,
+    "PERCENT_OF_TOTAL_OBSERVATIONS_FLAGGED": 0
   },
-  STATION: [{                     // Each station returned will have an
-    STATUS: "ACTIVE",             // inventory in this section
-    MNET_ID: "153",
-    PERIOD_OF_RECORD: {
-        start: "2012-04-26T00:00:00Z",
-        end: "2018-01-21T21:35:00Z"
-    },
-    ELEVATION: "4996",
-    NAME: "U of U Mountain Met Lab",
-    RESTRICTED: false,
-    STID: "MTMET",
-    SENSOR_VARIABLES: {
-        date_time: {
-            date_time: {}
+  "STATION": [
+    {
+      "STATUS": "ACTIVE",
+      "MNET_ID": "153",
+      "PERIOD_OF_RECORD": {
+        "start": "2012-04-26T00:00:00Z",
+        "end": "2018-01-21T21:35:00Z"
+      },
+      "ELEVATION": "4996",
+      "NAME": "U of U Mountain Met Lab",
+      "RESTRICTED": false,
+      "STID": "MTMET",
+      "SENSOR_VARIABLES": {
+        "date_time": {
+          "date_time": {}
         },
-        volt: {
-            volt_set_4: {},
-            volt_set_3: {},
-            volt_set_2: {},
-            volt_set_1: {
-                position: "0"
-            }
+        "volt": {
+          "volt_set_4": {},
+          "volt_set_3": {},
+          "volt_set_2": {},
+          "volt_set_1": {
+            "position": "0"
+          }
         },
-        air_temp: {
-            air_temp_set_1: {
-                position: "8"
-            }
+        "air_temp": {
+          "air_temp_set_1": {
+            "position": "8"
+          }
         }
-    },
-    ELEV_DEM: "4993",
-    LONGITUDE: "-111.828211",
-    STATE: "UT",
-    DATA_AFFECTED: false,
-    QC_FLAGGED: false,
-    LATITUDE: "40.766573",
-    TIMEZONE: "America/Denver",
-    ID: "33898",
-    OBSERVATIONS: {
-      date_time: [
-        "2017-01-03T08:30:00Z",
-        "2017-01-03T08:35:00Z",
-        "2017-01-03T08:40:00Z",
-        "2017-01-03T08:45:00Z"
-      ],
-      volt_set_4: [
-        13.5,
-        13.51,
-        13.61,
-        13.61
-      ],
-      volt_set_3: [
-        12.26,
-        12.26,
-        12.26,
-        12.26
-      ],
-      volt_set_2: [
-        14.4,
-        14.4,
-        14.4,
-        14.4
-      ],
-      volt_set_1: [
-        13.54,
-        13.55,
-        13.55,
-        13.55
-      ],
-      air_temp_set_1: [-4.82, -4.87, -4.89, -4.89]
+      },
+      "ELEV_DEM": "4993",
+      "LONGITUDE": "-111.828211",
+      "STATE": "UT",
+      "DATA_AFFECTED": false,
+      "QC_FLAGGED": false,
+      "LATITUDE": "40.766573",
+      "TIMEZONE": "America/Denver",
+      "ID": "33898",
+      "OBSERVATIONS": {
+        "date_time": ["2017-01-03T08:30:00Z", "2017-01-03T08:35:00Z", "2017-01-03T08:40:00Z", "2017-01-03T08:45:00Z"],
+        "volt_set_4": [13.5, 13.51, 13.61, 13.61],
+        "volt_set_3": [12.26, 12.26, 12.26, 12.26],
+        "volt_set_2": [14.4, 14.4, 14.4, 14.4],
+        "volt_set_1": [13.54, 13.55, 13.55, 13.55],
+        "air_temp_set_1": [-4.82, -4.87, -4.89, -4.89]
+      }
     }
-  }],
-  SUMMARY: {                      // Summary details about the entire response
-    DATA_QUERY_TIME: "8.29005241394 ms",
-    RESPONSE_CODE: 1,
-    RESPONSE_MESSAGE: "OK",
-    METADATA_RESPONSE_TIME: "0.0929832458496 ms",
-    DATA_PARSING_TIME: "0.491142272949 ms",
-    TOTAL_DATA_TIME: "8.78214836121 ms",
-    NUMBER_OF_OBJECTS: 1,
-    FUNCTION_USED: "time_data_parser"
+  ],
+  "SUMMARY": {
+    "DATA_QUERY_TIME": "8.29005241394 ms",
+    "RESPONSE_CODE": 1,
+    "RESPONSE_MESSAGE": "OK",
+    "METADATA_RESPONSE_TIME": "0.0929832458496 ms",
+    "DATA_PARSING_TIME": "0.491142272949 ms",
+    "TOTAL_DATA_TIME": "8.78214836121 ms",
+    "NUMBER_OF_OBJECTS": 1,
+    "FUNCTION_USED": "time_data_parser"
   }
 }
 ```
@@ -255,7 +228,7 @@ Here's an explicit breakdown of the response above.
 
 Currently only the Time Series service supports CSV ([Comma Separated Values][csv]) output. If you would like the CSV output, just add `output=csv` to the URL request. The same request above in CSV format would like like:
 
-```
+```csv
 # STATION: MTMET
 # STATION NAME: U of U Mountain Met Lab
 # LATITUDE: 40.766573

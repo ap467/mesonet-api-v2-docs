@@ -65,52 +65,52 @@ http://api.synopticdata.com/v2/stations/latency?token=dev&stid=wbb&start=2018010
 
 The Latency service will return its results in a single organized and self describing JSON object. At a minimum, every request will return a JSON object with a `"SUMMARY"` field.
 
-An example request response in JSON would be:
+An example JSON response would be:
 
-```
+```json
 {
-  STATION: [
+  "STATION": [
     {
-      STATUS: "ACTIVE",
-      MNET_ID: "153",
-      PERIOD_OF_RECORD: {
-        start: "1997-01-01T00:00:00Z",
-        end: "2018-01-09T00:45:00Z"
+      "STATUS": "ACTIVE",
+      "MNET_ID": "153",
+      "PERIOD_OF_RECORD": {
+        "start": "1997-01-01T00:00:00Z",
+        "end": "2018-01-09T00:45:00Z"
       },
-      ELEVATION: "4806",
-      NAME: "U of U William Browning Building",
-      LATITUDE: "40.76623",
-      TIMEZONE: "America/Denver",
-      ID: "1",
-      STID: "WBB",
-      LONGITUDE: "-111.84755",
-      STATE: "UT",
-      LATENCY: {
-        date_time: [
+      "ELEVATION": "4806",
+      "NAME": "U of U William Browning Building",
+      "LATITUDE": "40.76623",
+      "TIMEZONE": "America/Denver",
+      "ID": "1",
+      "STID": "WBB",
+      "LONGITUDE": "-111.84755",
+      "STATE": "UT",
+      "LATENCY": {
+        "date_time": [
           "2018-01-01T00:00:00Z", "2018-01-01T00:01:00Z",
           "2018-01-01T00:02:00Z", ...
         ],
-        values: [-3, 5, 4, ...]
+        "values": [-3, 5, 4, ...]
       },
-      STATISTICS: {
-        count: 1440,
-        start: "201801010000",
-        minimum: -3,
-        end: "201801012359",
-        mintime: "2018-01-01T00:00:00Z",
-        standard_deviation: 2.766415596,
-        maxtime: "2018-01-01T00:01:00Z",
-        median: 3,
-        average: 2.2166666985,
-        maximum: 5
+      "STATISTICS": {
+        "count": 1440,
+        "start": "201801010000",
+        "minimum": -3,
+        "end": "201801012359",
+        "mintime": "2018-01-01T00:00:00Z",
+        "standard_deviation": 2.766415596,
+        "maxtime": "2018-01-01T00:01:00Z",
+        "median": 3,
+        "average": 2.2166666985,
+        "maximum": 5
       }
     }
   ],
-    SUMMARY: {
-      RESPONSE_CODE: 1,
-      RESPONSE_MESSAGE: "OK",
-      TOTAL_DATA_TIME: "45.5708503723 ms",
-      NUMBER_OF_OBJECTS: 1
+    "SUMMARY": {
+      "RESPONSE_CODE": 1,
+      "RESPONSE_MESSAGE": "OK",
+      "TOTAL_DATA_TIME": "45.5708503723 ms",
+      "NUMBER_OF_OBJECTS": 1
   }
 }
 ```

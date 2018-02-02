@@ -49,19 +49,19 @@ By default, the API does not return data that has been flagged as non-plausible 
 
 If the `qc` parameter is omitted then the API will return data while assuming the following QC parameters: `qc=on`, `qc_remove_data=on`, `qc_flags=off` and `qc_checks=sl_range_check`. Below is an explanation of parameters that control the application of data checks (QC) to the data.
 
-* `qc` ("on, off"), Indicates the application behavior of the QC attributes on the data requested. If set to "off" then all data will be returned _without data checks and quality control_ (this is not recommended). It is possible to target a particular SynopticLabs data check or ask for the entire SynopticLabs test suite, i.e. `qc=on`. Regardless if any data checks are returned, a `"QC_FLAGGED: [bool]"` key will appear in the JSON response inside each `"STATION"` element. Data checks will be in the response key titled QC.
+* `qc` (on, off), Indicates the application behavior of the QC attributes on the data requested. If set to "off" then all data will be returned _without data checks and quality control_ (this is not recommended). It is possible to target a particular SynopticLabs data check or ask for the entire SynopticLabs test suite, i.e. `qc=on`. Regardless if any data checks are returned, a `"QC_FLAGGED: [bool]"` key will appear in the JSON response inside each `"STATION"` element. Data checks will be in the response key titled QC.
 
   > Note: The existence of a data check flag for an observation is not necessarily an indication of invalid or inaccurate data. For a detailed explanation how to apply data checks and how to leverage them, please click here to read more. Optional Output formatting and usability parameters
 
-* `qc_remove_data` ("on, off, mark"), Indicates the response behavior for an observation that fails a user specified data check.
+* `qc_remove_data` (on, off, mark), Indicates the response behavior for an observation that fails a user specified data check.
 
   * "off" returns the data values even if a data check failure is present for that data.
   * "on" removes failed data values with a "null".
   * "mark" replaces failed data with a value of "false".
 
-* `qc_flags` ("on, off") Indicates whether the data checks are returned alongside any data that failed a requested check. If "on" then the data checks will be returned in the `"STATION[n].QC.sensor_name"` block.
+* `qc_flags` (on, off) Indicates whether the data checks are returned alongside any data that failed a requested check. If "on" then the data checks will be returned in the `"STATION[n].QC.sensor_name"` block.
 
-* `qc_checks` ("[flag name], [flag source], all") defines a list of data checks applied to data values. The settings of other QC parameters determines how the data and data checks are returned.
+* `qc_checks` ([flag name], [flag source], all) defines a list of data checks applied to data values. The settings of other QC parameters determines how the data and data checks are returned.
 
   * "all" will return any data check in our system.
   * "flag name" allows the targeting of a flag by name or a list (comma separated) of flags.
@@ -78,55 +78,55 @@ Some common examples of modifying the default QC parameters are:
 
 The Latest service will return its results in a single organized and self describing JSON object. At a minimum, every request will return a JSON object with a `"SUMMARY"` field.
 
-An example request response in JSON would be:
+An example JSON response would be:
 
-```
+```json
 {
-  UNITS: {
-    solar_radiation: "W/m**2"
+  "UNITS": {
+    "solar_radiation": "W/m**2"
   },
-  QC_SUMMARY: {
-    QC_TESTS_APPLIED: ["sl_range_check"],
-    TOTAL_OBSERVATIONS_FLAGGED: 0,
-    PERCENT_OF_TOTAL_OBSERVATIONS_FLAGGED: 0
+  "QC_SUMMARY": {
+    "QC_TESTS_APPLIED": ["sl_range_check"],
+    "TOTAL_OBSERVATIONS_FLAGGED": 0,
+    "PERCENT_OF_TOTAL_OBSERVATIONS_FLAGGED": 0
   },
-  STATION: [{
-    STATUS: "ACTIVE",
-    MNET_ID: "153",
-    PERIOD_OF_RECORD: {
-        start: "1997-01-01T00:00:00Z",
-        end: "2017-08-21T05:33:00-0600"
+  "STATION": [{
+    "STATUS": "ACTIVE",
+    "MNET_ID": "153",
+    "PERIOD_OF_RECORD": {
+        "start": "1997-01-01T00:00:00Z",
+        "end": "2017-08-21T05:33:00-0600"
     },
-    ELEVATION: "4806",
-    NAME: "U of U William Browning Building",
-    QC_FLAGGED: false,
-    STID: "WBB",
-    SENSOR_VARIABLES: {
+    "ELEVATION": "4806",
+    "NAME": "U of U William Browning Building",
+    "QC_FLAGGED": false,
+    "STID": "WBB",
+    "SENSOR_VARIABLES": {
         ...
     },
-    ELEV_DEM: "4738",
-    LONGITUDE: "-111.84755",
-    STATE: "UT",
-    SENSOR_VARIABLES: {
-        date_time: { date_time: { } },
-        air_temp: {
-            air_temp_set_1: {
-                position: ""
+    "ELEV_DEM": "4738",
+    "LONGITUDE": "-111.84755",
+    "STATE": "UT",
+    "SENSOR_VARIABLES": {
+        "date_time": { "date_time": { } },
+        "air_temp": {
+            "air_temp_set_1": {
+                "position": ""
             }
         }
     },
-    OBSERVATIONS: {
+    "OBSERVATIONS": {
       "solar_radiation_value_1": {
         "date_time": "2017-08-21T05:33:00-0600",
         "value": 42
       }
     },
   }],
-  SUMMARY: {
-    RESPONSE_CODE: 1,
-    RESPONSE_MESSAGE: "OK",
-    RESPONSE_TIME: "12.0379924774 ms",
-    NUMBER_OF_OBJECTS: 1,
+  "SUMMARY": {
+    "RESPONSE_CODE": 1,
+    "RESPONSE_MESSAGE": "OK",
+    "RESPONSE_TIME": "12.0379924774 ms",
+    "NUMBER_OF_OBJECTS": 1,
   }
 }
 ```

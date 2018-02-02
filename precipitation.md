@@ -64,48 +64,50 @@ To get receive an API key click here or to create a token from your key click he
 
 The Precipitation service will return its results in a single organized and self describing JSON object. At a minimum, every request will return a JSON object with a `"SUMMARY"` field.
 
-An example request response in JSON would be:
+An example JSON response would be:
 
-```
+```json
 {
-  UNITS: {
-    precipitation: "Millimeters"
+  "UNITS": {
+    "precipitation": "Millimeters"
   },
-  STATION: [{
-    STATUS: "ACTIVE",
-    MNET_ID: "153",
-    PERIOD_OF_RECORD: {
-      start: "1997-01-01T00:00:00Z",
-      end: "2018-01-10T12:00:00Z"
-    },
-    ELEVATION: "4806",
-    NAME: "U of U William Browning Building",
-    RESTRICTED: false,
-    STID: "WBB",
-    ELEV_DEM: "4738",
-    LONGITUDE: "-111.84755",
-    STATE: "UT",
-    LATITUDE: "40.76623",
-    TIMEZONE: "America/Denver",
-    ID: "1"
-    OBSERVATIONS: {
-      precipitation: [
-        {
-        count: 12,
-        first_report: "2017-01-31T23:00:00Z",
-        interval: 1,
-        report_type: "precip_accum_five_minute",
-        last_report: "2017-01-31T23:55:00Z",
-        total: 0
-        }
-      ]
-    },
-  }],
-  SUMMARY: {
-    DATA_QUERY_TIME: 169.8219776154,
-    RESPONSE_CODE: 1,
-    RESPONSE_MESSAGE: "OK",
-    NUMBER_OF_OBJECTS: 1,
+  "STATION": [
+    {
+      "STATUS": "ACTIVE",
+      "MNET_ID": "153",
+      "PERIOD_OF_RECORD": {
+        "start": "1997-01-01T00:00:00Z",
+        "end": "2018-01-10T12:00:00Z"
+      },
+      "ELEVATION": "4806",
+      "NAME": "U of U William Browning Building",
+      "RESTRICTED": false,
+      "STID": "WBB",
+      "ELEV_DEM": "4738",
+      "LONGITUDE": "-111.84755",
+      "STATE": "UT",
+      "LATITUDE": "40.76623",
+      "TIMEZONE": "America/Denver",
+      "ID": "1",
+      "OBSERVATIONS": {
+        "precipitation": [
+          {
+            "count": 12,
+            "first_report": "2017-01-31T23:00:00Z",
+            "interval": 1,
+            "report_type": "precip_accum_five_minute",
+            "last_report": "2017-01-31T23:55:00Z",
+            "total": 0
+          }
+        ]
+      }
+    }
+  ],
+  "SUMMARY": {
+    "DATA_QUERY_TIME": 169.8219776154,
+    "RESPONSE_CODE": 1,
+    "RESPONSE_MESSAGE": "OK",
+    "NUMBER_OF_OBJECTS": 1
   }
 }
 ```

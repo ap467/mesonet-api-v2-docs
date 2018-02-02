@@ -40,43 +40,43 @@ Acquiring data from this web service requires certain parameters. When encoding 
 
 The Metadata service will return its results in a single organized and self describing JSON object. At a minimum, every request will return a JSON object with a `"SUMMARY"` field.
 
-An example request response in JSON would be:
+An example JSON response would be:
 
-```
+```json
 {
-  STATION: [{
-    STATUS: "ACTIVE",
-    MNET_ID: "1",
-    LONGITUDE: "-111.96503",
-    LATITUDE: "40.77069",
-    TIMEZONE: "America/Denver",
-    ID: "53"
-    STATE: "UT",
-    PERIOD_OF_RECORD: {
-      start: "1970-01-01T00:00:00Z",
-      end: "2017-06-22T18:20:00Z"
+  "STATION": [{
+    "STATUS": "ACTIVE",
+    "MNET_ID": "1",
+    "LONGITUDE": "-111.96503",
+    "LATITUDE": "40.77069",
+    "TIMEZONE": "America/Denver",
+    "ID": "53",
+    "STATE": "UT",
+    "PERIOD_OF_RECORD": {
+      "start": "1970-01-01T00:00:00Z",
+      "end": "2017-06-22T18:20:00Z"
     },
-    ELEVATION: "4226",
-    NAME: "Salt Lake City, Salt Lake City International Airport",
-    QC_FLAGGED: false,
-    STID: "KSLC",
-    SENSOR_VARIABLES: {
-      wind_direction: {
-        wind_direction_1: {
-          position: "10",
-          period_of_record: {
-            start: "2016-01-04T20:30:00Z",
-            end: "2017-08-23T16:50:00Z"
+    "ELEVATION": "4226",
+    "NAME": "Salt Lake City, Salt Lake City International Airport",
+    "QC_FLAGGED": false,
+    "STID": "KSLC",
+    "SENSOR_VARIABLES": {
+      "wind_direction": {
+        "wind_direction_1": {
+          "position": "10",
+          "period_of_record": {
+            "start": "2016-01-04T20:30:00Z",
+            "end": "2017-08-23T16:50:00Z"
           }
         }
       },
       ...
     }
   }],
-  SUMMARY: {
-    RESPONSE_CODE: 1,
-    RESPONSE_MESSAGE: "OK",
-    NUMBER_OF_OBJECTS: 1,
+  "SUMMARY": {
+    "RESPONSE_CODE": 1,
+    "RESPONSE_MESSAGE": "OK",
+    "NUMBER_OF_OBJECTS": 1,
   }
 }
 ```

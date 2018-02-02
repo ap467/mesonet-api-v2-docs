@@ -45,7 +45,7 @@ Acquiring data from this web service requires certain parameters. When encoding 
   * `alti` (pa, inhg), Altimeter: Pascals, inches mercury.
 
   Furthermore, it is possible to modify one of the preset settings (metric/english). This is achieved by appending a variable group and unit to the parameter string with a comma. For example, to use "english" units with altimeter in inHg the parameter would be `units=english,alti, inhg`.
-  
+
 * `precip` (1, 0), Enable derived precip. All raw precip variables will be replaced with two new variables called `precip_interval_set_x` and `precip_accum_set_x`. Example: `precip=1`.
 
 The following example request all the stations in Utah with an observation within the last two hours:
@@ -110,7 +110,7 @@ Some common examples of modifiying the default qc parameters are:
 
 The Time Series service will return its results in a single organized and self describing JSON object. At a minimum, every request will return a JSON object with a `SUMMARY` field.
 
-An example request response in JSON would be:
+An example JSON response would be:
 
 ```json
 {
@@ -122,45 +122,48 @@ An example request response in JSON would be:
     "TOTAL_OBSERVATIONS_FLAGGED": 0,
     "PERCENT_OF_TOTAL_OBSERVATIONS_FLAGGED": 0
   },
-  "STATION": [{
-    "STATUS": "ACTIVE",
-    "MNET_ID": "1",
-    "LONGITUDE": "-111.96503",
-    "LATITUDE": "40.77069",
-    "TIMEZONE": "America/Denver",
-    "ID": "53",
-    "STATE": "UT",
-    "PERIOD_OF_RECORD": {
-      "start": "1970-01-01T00:00:00Z",
-      "end": "2017-06-22T18:20:00Z"
-    },
-    "ELEVATION": "4226",
-    "NAME": "Salt Lake City, Salt Lake City International Airport",
-    "QC_FLAGGED": false,
-    "STID": "KSLC",
-    "SENSOR_VARIABLES": {
-        "date_time": { "date_time": { } },
+  "STATION": [
+    {
+      "STATUS": "ACTIVE",
+      "MNET_ID": "1",
+      "LONGITUDE": "-111.96503",
+      "LATITUDE": "40.77069",
+      "TIMEZONE": "America/Denver",
+      "ID": "53",
+      "STATE": "UT",
+      "PERIOD_OF_RECORD": {
+        "start": "1970-01-01T00:00:00Z",
+        "end": "2017-06-22T18:20:00Z"
+      },
+      "ELEVATION": "4226",
+      "NAME": "Salt Lake City, Salt Lake City International Airport",
+      "QC_FLAGGED": false,
+      "STID": "KSLC",
+      "SENSOR_VARIABLES": {
+        "date_time": { "date_time": {} },
         "air_temp": {
-            "air_temp_set_1": {
-                "position": ""
-            }
+          "air_temp_set_1": {
+            "position": ""
+          }
         }
-    },
-    "OBSERVATIONS": {
-      "date_time": [
-        "2015-01-03T00:00:00Z", "2015-01-03T00:05:00Z", "2015-01-03T00:10:00Z",
-        "2015-01-03T00:15:00Z", "2015-01-03T00:20:00Z",
-      ],
-      "air_temp_set_1": [
-        -5.6, -5.6, -6.1, -6.1, -6.7,
-      ]
-    },
-  }],
+      },
+      "OBSERVATIONS": {
+        "date_time": [
+          "2015-01-03T00:00:00Z",
+          "2015-01-03T00:05:00Z",
+          "2015-01-03T00:10:00Z",
+          "2015-01-03T00:15:00Z",
+          "2015-01-03T00:20:00Z"
+        ],
+        "air_temp_set_1": [-5.6, -5.6, -6.1, -6.1, -6.7]
+      }
+    }
+  ],
   "SUMMARY": {
     "RESPONSE_CODE": 1,
     "RESPONSE_MESSAGE": "OK",
     "TOTAL_DATA_TIME": "12.0379924774 ms",
-    "NUMBER_OF_OBJECTS": 1,
+    "NUMBER_OF_OBJECTS": 1
   }
 }
 ```

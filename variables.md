@@ -31,32 +31,32 @@ No optional arguments.
 
 The variables service will return its results in a single organized and self describing JSON object. At a minimum, every request will return a JSON object with a `"SUMMARY"` field.
 
-An example request response in JSON would be:
+An example JSON response would be:
 
-```
+```json
 {
-  VARIABLES: [
+  "VARIABLES": [
     {
-      air_temp: {
-        long_name: "Temperature",
-        unit: "Celsius"
+      "air_temp": {
+        "long_name": "Temperature",
+        "unit": "Celsius"
       }
     },
     {
-      dew_point_temperature: {
-        long_name: "Dew Point",
-        unit: "Celsius"
+      "dew_point_temperature": {
+        "long_name": "Dew Point",
+        "unit": "Celsius"
       }
     }
 
     ...
 
     ],
-    SUMMARY: {
-      NUMBER_OF_OBJECTS: 123,
-      RESPONSE_CODE: 1,
-      RESPONSE_MESSAGE: "OK",
-      RESPONSE_TIME: "0.164985656738 ms"
+    "SUMMARY": {
+      "NUMBER_OF_OBJECTS": 123,
+      "RESPONSE_CODE": 1,
+      "RESPONSE_MESSAGE": "OK",
+      "RESPONSE_TIME": "0.164985656738 ms"
     }
 }
 ```

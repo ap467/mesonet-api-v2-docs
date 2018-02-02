@@ -37,34 +37,34 @@ Acquiring data from this web service requires certain parameters. When encoding 
 
 The Network service will return its results in a single organized and self describing JSON object. At a minimum, every request will return a JSON object with a `"SUMMARY"` field.
 
-An example request response in JSON would be:
+An example JSON response would be:
 
-```
+```json
 {
-  MNET: [
+  "MNET": [
     {
-      CATEGORY: "6",
-      REPORTING_STATIONS: 57,
-      LAST_OBSERVATION: "2018-01-19T15:50:00Z",
-      URL: null,
-      PERCENT_REPORTING: 98.28,
-      PERIOD_CHECKED: 120,
-      TOTAL_STATIONS: 64,
-      ACTIVE_STATIONS: 58,
-      LONGNAME: "University of Utah MesoWest Mesonet",
-      SHORTNAME: "UUNET",
-      PERCENT_ACTIVE: 90.63,
-      ID: "153"
+      "CATEGORY": "6",
+      "REPORTING_STATIONS": 57,
+      "LAST_OBSERVATION": "2018-01-19T15:50:00Z",
+      "URL": null,
+      "PERCENT_REPORTING": 98.28,
+      "PERIOD_CHECKED": 120,
+      "TOTAL_STATIONS": 64,
+      "ACTIVE_STATIONS": 58,
+      "LONGNAME": "University of Utah MesoWest Mesonet",
+      "SHORTNAME": "UUNET",
+      "PERCENT_ACTIVE": 90.63,
+      "ID": "153"
     },
 
     ...
 
     ],
-    SUMMARY: {
-      NUMBER_OF_OBJECTS: 123,
-      RESPONSE_CODE: 1,
-      RESPONSE_MESSAGE: "OK",
-      RESPONSE_TIME: "0.164985656738 ms"
+    "SUMMARY": {
+      "NUMBER_OF_OBJECTS": 123,
+      "RESPONSE_CODE": 1,
+      "RESPONSE_MESSAGE": "OK",
+      "RESPONSE_TIME": "0.164985656738 ms"
     }
 }
 ```

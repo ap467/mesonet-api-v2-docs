@@ -35,24 +35,24 @@ Acquiring data from this web service requires certain parameters. When encoding 
 
 The QC Types service will return its results in a single organized and self describing JSON object. At a minimum, every request will return a JSON object with a `"SUMMARY"` field.
 
-An example request response in JSON would be:
+An example JSON response would be:
 
-```
+```json
 {
-  MNETCAT: [
+  "MNETCAT": [
     {
-      DESCRIPTION: "Agricultural",
-      ID: "1",
-      NAME: "AG"
+      "DESCRIPTION": "Agricultural",
+      "ID": "1",
+      "NAME": "AG"
     },
 
     ...
 
   ],
-  SUMMARY: {
-    NUMBER_OF_OBJECTS: 13,
-    RESPONSE_CODE: 1,
-    RESPONSE_MESSAGE: "OK",
+  "SUMMARY": {
+    "NUMBER_OF_OBJECTS": 13,
+    "RESPONSE_CODE": 1,
+    "RESPONSE_MESSAGE": "OK",
   }
 }
 ```

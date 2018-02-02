@@ -37,7 +37,7 @@ Acquiring data from this web service requires certain parameters. When encoding 
 
 * `showemptystations` (off, on), Indicates if stations with no observations for the requested time span will be returned. Often when querying a large group of stations there will be stations that do not meet the criteria of additional request arguments. Setting this value to "on" will return any station meeting the geographical or network group, even if there is no observation data available.
 
-* `qc_checks` ("[flag name], [flag source], all") defines a list of data checks applied to data values. The settings of other qc parameters determines how the data and data checks are returned.
+* `qc_checks` ([flag name], [flag source], all) defines a list of data checks applied to data values. The settings of other QC parameters determines how the data and data checks are returned.
 
   * "all" will return any data check in our system.
   * "flag name" allows the targeting of a flag by name or a list (comma separated) of flags.
@@ -75,62 +75,63 @@ To get receive an API key click here or to create a token from your key click he
 
 The QC Segments service will return its results in a single organized and self describing JSON object. At a minimum, every request will return a JSON object with a `"SUMMARY"` field.
 
-An example request response in JSON would be:
+An example JSON response would be:
 
-```
+```json
 {
-  QC_SHORTNAMES: {
-    78: "sl_multvariate_lin_reg_check",
-    80: "sl_uu2dvar_rejection"
+  "QC_SHORTNAMES": {
+    "78": "sl_multvariate_lin_reg_check",
+    "80": "sl_uu2dvar_rejection"
   },
-  QC_SOURCENAMES: {
-    78: "SynopticLabs",
-    80: "SynopticLabs"
+  "QC_SOURCENAMES": {
+    "78": "SynopticLabs",
+    "80": "SynopticLabs"
   },
-  STATION: [
+  "STATION": [
     {
-      STATUS: "ACTIVE",
-      MNET_ID: "195",
-      PERIOD_OF_RECORD: {
-        start: "2014-03-20T00:00:00Z",
-        end: "2018-01-22T02:00:00Z"
+      "STATUS": "ACTIVE",
+      "MNET_ID": "195",
+      "PERIOD_OF_RECORD": {
+        "start": "2014-03-20T00:00:00Z",
+        "end": "2018-01-22T02:00:00Z"
       },
-      ELEVATION: "3885",
-      NAME: "ARNOLD CA",
-      DISTANCE: 7.77,
-      RESTRICTED: false,
-      STID: "ARLC1",
-      STATE: "CA",
-      LATITUDE: "38.23",
-      TIMEZONE: "America/Los_Angeles",
-      ID: "42541"
-      ELEV_DEM: "3819",
-      LONGITUDE: "-120.36",
-      SENSOR_VARIABLES: {
-        air_temp: { air_temp_qc_1: { } },
+      "ELEVATION": "3885",
+      "NAME": "ARNOLD CA",
+      "DISTANCE": 7.77,
+      "RESTRICTED": false,
+      "STID": "ARLC1",
+      "STATE": "CA",
+      "LATITUDE": "38.23",
+      "TIMEZONE": "America/Los_Angeles",
+      "ID": "42541",
+      "ELEV_DEM": "3819",
+      "LONGITUDE": "-120.36",
+      "SENSOR_VARIABLES": {
+        "air_temp": { "air_temp_qc_1": {} }
       },
-      QC: [
+      "QC": [
         {
-          start: "2018-01-21T17:00:00Z",
-          qc_flag: 78,
-          sensor: "air_temp_qc_1",
-          end: "2018-01-21T17:00:00Z",
-          is_open: true
+          "start": "2018-01-21T17:00:00Z",
+          "qc_flag": 78,
+          "sensor": "air_temp_qc_1",
+          "end": "2018-01-21T17:00:00Z",
+          "is_open": true
         },
         {
-          start: "2018-01-21T17:00:00Z",
-          qc_flag: 80,
-          sensor: "air_temp_qc_1",
-          end: "2018-01-21T17:00:00Z",
-          is_open: false
-        },
-    ],
-  }],
-  SUMMARY: {
-    RESPONSE_CODE: 1,
-    RESPONSE_MESSAGE: "OK",
-    TOTAL_DATA_TIME: "14.3580436707 ms",
-    NUMBER_OF_OBJECTS: 17,
+          "start": "2018-01-21T17:00:00Z",
+          "qc_flag": 80,
+          "sensor": "air_temp_qc_1",
+          "end": "2018-01-21T17:00:00Z",
+          "is_open": false
+        }
+      ]
+    }
+  ],
+  "SUMMARY": {
+    "RESPONSE_CODE": 1,
+    "RESPONSE_MESSAGE": "OK",
+    "TOTAL_DATA_TIME": "14.3580436707 ms",
+    "NUMBER_OF_OBJECTS": 17
   }
 }
 ```
@@ -161,7 +162,7 @@ An example request response in JSON would be:
 
 * `QC_SHORTNAMES{}`, key/value pairs of QC flag IDs to short names.
 
-* `QC_NAMES{}`, key/valye pair of QC flag IDs to flag's formal name.
+* `QC_NAMES{}`, key/value pair of QC flag IDs to flag's formal name.
 
 * `QC_SOURCENAMES{}`, key/value pairs of QC flag IDs to provider name.
 

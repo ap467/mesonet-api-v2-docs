@@ -36,21 +36,21 @@ The Authentication service will return single organized and self describing JSON
 
 ### Create a token
 
-```
-http://api.synopticdata.com/v2/auth?apikey=ABC123
+```json
+# http://api.synopticdata.com/v2/auth?apikey=ABC123
 
 {
-  TOKEN: "1672c91e97a7421f8ac67f7681d5810a"
+  "TOKEN": "1672c91e97a7421f8ac67f7681d5810a"
 }
 ```
 
 ### List all tokens
 
-```
-http://api.synopticdata.com/v2/auth?apikey=ABC123&list=1
+```json
+# http://api.synopticdata.com/v2/auth?apikey=ABC123&list=1
 
 {
-  TOKENS: [
+  "TOKENS": [
     "a6a82dddc14a46c892077bded6f5a342",
     "3839e26df2c54ae1aa064dc677ac1697",
     "0ca4be58420a43b3a27251ad9c376978",
@@ -61,11 +61,11 @@ http://api.synopticdata.com/v2/auth?apikey=ABC123&list=1
 
 ### Delete a token
 
-```
-http://api.synopticdata.com/v2/auth?apikey=ABC123&disableToken=1672c91e97a7421f8ac67f7681d58142
+```json
+# http://api.synopticdata.com/v2/auth?apikey=ABC123&disableToken=1672c91e97a7421f8ac67f7681d58142
 
 {
-  MESSAGE: "Token 1672c91e97a7421f8ac67f7681d58142 is disabled."
+  "MESSAGE": "Token 1672c91e97a7421f8ac67f7681d58142 is disabled."
 }
 ```
 

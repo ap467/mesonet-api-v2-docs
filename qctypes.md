@@ -39,22 +39,22 @@ http://api.synopticdata.com/v2/qctypes?token=YOUR_TOKEN_HERE&shortname=sl_range_
 
 The QC Types service will return its results in a single organized and self describing JSON object. At a minimum, every request will return a JSON object with a `"SUMMARY"` field.
 
-An example request response in JSON would be:
+An example JSON response would be:
 
-```
+```json
 {
-  QCTYPES: [
+  "QCTYPES": [
     {
-      SOURCE_ID: "1",
-      SHORTNAME: "sl_range_check",
-      ID: "1",
-      NAME: "SynopticLabs Range Check"
+      "SOURCE_ID": "1",
+      "SHORTNAME": "sl_range_check",
+      "ID": "1",
+      "NAME": "SynopticLabs Range Check"
     }
   ],
-  SUMMARY: {
-    NUMBER_OF_OBJECTS: 1,
-    RESPONSE_CODE: 1,
-    RESPONSE_MESSAGE: "OK",
+  "SUMMARY": {
+    "NUMBER_OF_OBJECTS": 1,
+    "RESPONSE_CODE": 1,
+    "RESPONSE_MESSAGE": "OK"
   }
 }
 ```
@@ -80,10 +80,10 @@ An example request response in JSON would be:
 
 ## Provider IDs
 
-, ID , Provider ,
-, --- , ------------ ,
-, 1 , SynopticLabs ,
-, 2 , MADIS (NOAA) ,
+| ID  | Provider     |
+| --- | ------------ |
+| 1   | SynopticLabs |
+| 2   | MADIS (NOAA) |
 
 <!-- References & URLs -->
 

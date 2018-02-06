@@ -4,10 +4,6 @@ permalink: /v2/
 layout: default
 ---
 
-<ol class="breadcrumb">
-  <li><a href="{{site.baseurl}}">Return Home</a></li>
-</ol>
-
 Gain access to over 60,000 surface weather stations mostly in North America. The Mesonet API is an easy to use REST API that supports real-time and historical data.
 
 If you are new to the Mesonet API please take a second to read our [getting started section][getting-started].

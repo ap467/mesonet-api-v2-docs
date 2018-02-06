@@ -43,19 +43,17 @@ Acquiring data from this web service requires certain parameters. When encoding 
   * "flag name" allows the targeting of a flag by name or a list (comma separated) of flags.
   * "flag source" allows targeting a data check provider i.e. "synopticlabs" for SynopticLabs.
 
-The following example request all the stations in Utah with an open QC segment within the last two hours:
+The following example will request all the stations in Utah with an open QC segment within the last two hours:
 
 ```
 https://api.synopticdata.com/v2/qcsegments?state=ut&recent=120&token=YOUR_TOKEN_HERE
 ```
 
-The following example requests only the QC segments for air temperature at KSLC (Salt Lake City Airport) on January 3, 2015:
+The following example will request only the QC segments for air temperature at KSLC (Salt Lake City Airport) on January 3, 2015:
 
 ```
 https://api.synopticdata.com/v2/qcsegments?stid=kslc&start=201501030000&end=201501032359&vars=air_temp&token=YOUR_TOKEN_HERE
 ```
-
-To get receive an API key click here or to create a token from your key click here.
 
 **Response Format Parameters**
 

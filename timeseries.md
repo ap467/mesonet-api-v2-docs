@@ -48,19 +48,17 @@ Acquiring data from this web service requires certain parameters. When encoding 
 
 * `precip` (1, 0), Enable derived precip. All raw precip variables will be replaced with two new variables called `precip_interval_set_x` and `precip_accum_set_x`. Example: `precip=1`.
 
-The following example request all the stations in Utah with an observation within the last two hours:
+The following example will request all the stations in Utah with an observation within the last two hours:
 
 ```
 https://api.synopticdata.com/v2/stations/timeseries?state=ut&recent=120&token_YOUR_TOKEN_HERE
 ```
 
-The following example requests only the air temperature for KSLC (Salt Lake City Airport) on January 3, 2015:
+The following example will request only the air temperature for KSLC (Salt Lake City Airport) on January 3, 2015:
 
 ```
 https://api.synopticdata.com/v2/stations/timeseries?stid=kslc&start=201501030000&end=201501032359&vars=air_temp&token_YOUR_TOKEN_HERE
 ```
-
-To get receive an API key click here or to create a token from your key click here.
 
 **Response Format Parameters**
 

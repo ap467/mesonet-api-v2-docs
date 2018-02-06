@@ -37,9 +37,9 @@ If you are new to the Mesonet API please take a second to read our [getting star
 
 <!-- Reword this when we get to Alerts -->
 
-All of the web services are [REST APIs][rest-service], meaning that each request is stateless and can be made via a simple HTTP request. The base url of all the Mesonet services is `https://api.synopticdata.com/v2/` and all requests require an API token. It's easy to get an API key and get going. We have a quick start guide here to get you up and running in just a few minutes [here][getting-started]
+All of these web services are [REST APIs][rest-service] and can be made via a simple HTTP request. The base url for all requests is `https://api.synopticdata.com/v2/` and all requests require an API token. It's easy to get an API key and get going. We have a quick start guide here to get you up and running in just a few minutes [here][getting-started].
 
-The Mesonet API also support JSONP callbacks. Just add the `callback` parameter to any request.
+The Mesonet API also support JSONP callbacks. Just add the `callback=YOU_CALLBACK` parameter to any request.
 
 You can read more in our [Getting Started][getting-started] guide.
 

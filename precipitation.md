@@ -1,5 +1,5 @@
 ---
-title: Precipitation API
+title: Precipitation Service
 permalink: /v2/precipitation/
 layout: refdoc
 tagline: Returns derived precipitation for a station or set of stations based on a time span
@@ -10,7 +10,7 @@ tagline: Returns derived precipitation for a station or set of stations based on
 A Precipitation request is an HTTP URL with the following form:
 
 ```
-https://api.synopticdata.com/v2/stations/precip?parameters
+https://api.synopticdata.com/v2/stations/precip
 ```
 
 Acquiring data from this web service requires certain parameters. When encoding URLs, all parameters are separated using the ampersand (&) character and their value is indicated by an equal sign (=). Below is a list of accepted parameters.
@@ -43,7 +43,7 @@ Acquiring data from this web service requires certain parameters. When encoding 
 The following example requests precipitation from from `stid=wbb` for all of January 2017 in terms of day intervals.
 
 ```
-http://api.synopticdata.com/v2/stations/precip?token=YOUR_TOKEN_HERE&stid=wbb&start=201701010000&end=201701312359&pmode=intervals&interval=day
+https://api.synopticdata.com/v2/stations/precip?stid=wbb&start=201701010000&end=201701312359&pmode=intervals&interval=day&token=YOUR_TOKEN_HERE
 ```
 
 To get receive an API key click here or to create a token from your key click here.
@@ -133,6 +133,6 @@ An example JSON response would be:
 
 [epoch-seconds]: https://en.wikipedia.org/wiki/Unix_time
 [iso-8601]: https://en.wikipedia.org/wiki/ISO_8601
-[json]: http://json.org/
+[json]: https://json.org/
 [station-selectors]: ../station-selectors/
-[strftime]: http://man7.org/linux/man-pages/man3/strftime.3.html
+[strftime]: https://man7.org/linux/man-pages/man3/strftime.3.html

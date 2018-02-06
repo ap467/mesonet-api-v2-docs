@@ -5,16 +5,16 @@ layout: refdoc
 tagline: Ways to filter and discover available weather stations
 ---
 
-The following parameters can be used in the following APIs:
+<!-- The following parameters can be used in the following APIs: -->
 
-* [Time Series API][timeseries-api]
+<!-- * [Time Series API][timeseries-api]
 * [Latest API](../latest/)
 * [Nearest Time API](../nearesttime/)
 * [Precipitation API](../precipitation/)
 * [Metadata API](../metadata/)
 * [Latency API](../latency/)
 * [Climatology API](../climatology/)
-* [QC Segments API](../qcsegments/)
+* [QC Segments API](../qcsegments/) -->
 
 **Station Selectors**
 
@@ -28,7 +28,7 @@ These selectors individually or combined to target the desired data.
 * `cwa` (string), Single or comma separated list of National Weather Service County Warning Areas. Example: `cwa=LOX`.
 * `gacc` (string), Single or comma separated list of Geographic Area Coordination Centers. Example: `gacc=GB`.
 * `subgacc` (string), Single or comma separated list of Sub Geographic Area Coordination Centers. Example: `subgacc=EB07`.
-* `county` (string), Single or comma separated list of counties. Use the `state` parameter to filter by state in the case of duplicate county names (such as King). Example: `county=king&state=wa`.
+* `county` (string), Single or comma separated list of counties. Use the `state` parameter to filter by state in the case of duplicate county names (i.e. "King"). Example: `county=king&state=wa`.
 * `vars` (string), Single or comma separated list of sensor variables found here. The request will return all stations matching at least one of the variables provided. This is useful for filtering all stations that sense only certain variables, such as wind speed, or pressure. Do not specify vars twice in a query string. Example: `vars=wind_speed,pressure`.
 * `network` (number, string), Single or comma separated list of network IDs or short names. The ID can be found be using the [Networks API][network-api]. Example: `network=153` or `network=uunet,raws`
 * `radius` (string), A comma separated list of three values of the type `[latitude,longitude,miles]` or `[stn_id,miles]`. Coordinates are in decimal degrees. Returns all stations within radius of the point (or station, given by the station ID) and provides the distance of the station from given location by 'Distance' with units of miles. Adding `limit=n` to the query will limit the number of returned stations to **n** stations. Some examples are: `radius=41.5,-120.25,20`, `radius=wbb,10`, `radius=41.5,-120.25,20&limit=10`.
@@ -39,6 +39,5 @@ These selectors individually or combined to target the desired data.
 
 <!-- Refs and Such -->
 
-[station-selectors]: ../station-selectors/
-[timeseries-api]: ../timeseries/
-[network-api]: ../networks/
+[timeseries-api]: ./timeseries/
+[network-api]: ./networks/

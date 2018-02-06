@@ -1,5 +1,5 @@
 ---
-title: Quality Control Types API
+title: Quality Control Types Service
 permalink: /v2/qctypes/
 layout: refdoc
 tagline: Returns details about a quality control (data attribute) flag
@@ -26,7 +26,7 @@ Acquiring data from this web service requires certain parameters. When encoding 
 The following example returns basic information about the SynopticLabs Range Check.
 
 ```
-http://api.synopticdata.com/v2/qctypes?token=YOUR_TOKEN_HERE&shortname=sl_range_check
+https://api.synopticdata.com/v2/qctypes?token=YOUR_TOKEN_HERE&shortname=sl_range_check
 ```
 
 **Response Format Parameters**
@@ -89,4 +89,4 @@ An example JSON response would be:
 
 [qc-types-lookup]: https://synopticlabs.org/demos/lookup/?lookup=qctypes
 [sl-data-checks]: https://synopticlabs.org/api/mesonet/reference/qc/
-[json]: http://json.org/
+[json]: https://json.org/

@@ -1,10 +1,10 @@
 ---
-title: Nearest Time API
+title: Nearest Time Service
 permalink: /v2/nearesttime/
 layout: refdoc
 tagline: Returns the observation closest to the time requested
 bannerimage: latest.png
-bannercaption: Latest API
+bannercaption: Nearest Time Service
 ---
 
 ## Nearest Time Requests
@@ -12,7 +12,7 @@ bannercaption: Latest API
 A Nearest Time request is an HTTP URL with the following form:
 
 ```
-https://api.synopticdata.com/v2/stations/nearesttime?parameters
+https://api.synopticdata.com/v2/stations/nearesttime
 ```
 
 Acquiring data from this web service requires certain parameters. When encoding URLs, all parameters are separated using the ampersand (&) character and their value is indicated by an equal sign (=). Below is a list of accepted parameters.
@@ -170,6 +170,6 @@ An example JSON response would be:
 [network-api]: ../networks/
 [epoch-seconds]: https://en.wikipedia.org/wiki/Unix_time
 [iso-8601]: https://en.wikipedia.org/wiki/ISO_8601
-[json]: http://json.org/
+[json]: https://json.org/
 [sl-range-check]: https://synopticlabs.org/api/mesonet/reference/qc/#Range_check
-[strftime]: http://man7.org/linux/man-pages/man3/strftime.3.html
+[strftime]: https://man7.org/linux/man-pages/man3/strftime.3.html

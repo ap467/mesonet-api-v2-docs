@@ -1,5 +1,5 @@
 ---
-title: Networks API
+title: Networks Service
 permalink: /v2/networks/
 layout: refdoc
 tagline: Returns metadata and analytics on the networks within the Mesonet dataset
@@ -99,4 +99,4 @@ An example JSON response would be:
 <!-- References & URLs -->
 
 [networks-lookup]: https://synopticlabs.org/demos/lookup/?lookup=variables
-[json]: http://json.org/
+[json]: https://json.org/

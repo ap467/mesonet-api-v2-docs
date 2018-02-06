@@ -1,5 +1,5 @@
 ---
-title: Latency API
+title: Latency Service
 permalink: /v2/latency/
 layout: refdoc
 tagline: Returns transmission latency for a station or set of stations based on a start and end date/time.
@@ -10,7 +10,7 @@ tagline: Returns transmission latency for a station or set of stations based on 
 A Latency request is an HTTP URL with the following form:
 
 ```
-https://api.synopticdata.com/v2/stations/timeseries?parameters
+https://api.synopticdata.com/v2/stations/timeseries
 ```
 
 This service reports the delay time (in minutes) of an observation received at our ingest servers relative to the observation's timestamp. Due to the nature of computer clock drift and time synchronization, some observations can be received "before they occur". This results in a negative latency value. This can occur from in incorrect time stamp as provided by the station, or (more often than not) natural clock drift.
@@ -35,18 +35,18 @@ Acquiring data from this web service requires certain parameters. When encoding 
 
 * `stats` (min, max, mean, median, count, stdev, all), Indicates what statistical values to return. Values can not be combined.
 
-  * `stats=min`, returns the minimum value and time stamp.
-  * `stats=max`, returns the maximum value and time stamp.
-  * `stats=mean`, returns the mean (average) value and start and end time stamps.
-  * `stats=median`, returns the median value and start and end time stamps.
-  * `stats=count`, returns the number of mins in time span.
-  * `stats=stdev`, returns the standard deviation value and start and end time stamps.
-  * `stats=all`, returns all statistics.
+  * `stats=min` returns the minimum value and time stamp.
+  * `stats=max` returns the maximum value and time stamp.
+  * `stats=mean` returns the mean (average) value and start and end time stamps.
+  * `stats=median` returns the median value and start and end time stamps.
+  * `stats=count` returns the number of mins in time span.
+  * `stats=stdev` returns the standard deviation value and start and end time stamps.
+  * `stats=all` returns all statistics.
 
 The following example returns the latency and statistics for `stid=wbb` in for January 1, 2018:
 
 ```
-http://api.synopticdata.com/v2/stations/latency?token=dev&stid=wbb&start=201801010000&end=201801012359&stats=all
+https://api.synopticdata.com/v2/stations/latency?stid=wbb&start=201801010000&end=201801012359&stats=all&token=YOUR_TOKEN_HERE
 ```
 
 **Response Format Parameters**
@@ -140,6 +140,6 @@ An example JSON response would be:
 [network-api]: ../networks/
 [epoch-seconds]: https://en.wikipedia.org/wiki/Unix_time
 [iso-8601]: https://en.wikipedia.org/wiki/ISO_8601
-[json]: http://json.org/
+[json]: https://json.org/
 [sl-range-check]: https://synopticlabs.org/api/mesonet/reference/qc/#Range_check
-[strftime]: http://man7.org/linux/man-pages/man3/strftime.3.html
+[strftime]: https://man7.org/linux/man-pages/man3/strftime.3.html

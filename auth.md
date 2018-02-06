@@ -1,5 +1,5 @@
 ---
-title: Authentication API
+title: Authentication Service
 permalink: /v2/auth/
 layout: refdoc
 tagline: Create and manage tokens to access Mesonet APIs.
@@ -7,12 +7,12 @@ tagline: Create and manage tokens to access Mesonet APIs.
 
 ## Authentication Requests
 
-Interface for account management services. **Should not be used by clients**, as it interfaces with your private API key, not tokens.
+Interface for account management services. **Should not be used by clients** because it interfaces with your private API key, not tokens.
 
 An Authentication request is an HTTP URL with the following form:
 
 ```
-https://api.synopticdata.com/v2/auth?parameters
+https://api.synopticdata.com/v2/auth
 ```
 
 Acquiring data from this web service requires certain parameters. When encoding URLs, all parameters are separated using the ampersand (&) character and their value is indicated by an equal sign (=). Below is a list of accepted parameters.
@@ -37,7 +37,7 @@ The Authentication service will return single organized and self describing JSON
 ### Create a token
 
 ```json
-# http://api.synopticdata.com/v2/auth?apikey=ABC123
+# https://api.synopticdata.com/v2/auth?apikey=ABC123
 
 {
   "TOKEN": "1672c91e97a7421f8ac67f7681d5810a"
@@ -47,7 +47,7 @@ The Authentication service will return single organized and self describing JSON
 ### List all tokens
 
 ```json
-# http://api.synopticdata.com/v2/auth?apikey=ABC123&list=1
+# https://api.synopticdata.com/v2/auth?apikey=ABC123&list=1
 
 {
   "TOKENS": [
@@ -62,7 +62,7 @@ The Authentication service will return single organized and self describing JSON
 ### Delete a token
 
 ```json
-# http://api.synopticdata.com/v2/auth?apikey=ABC123&disableToken=1672c91e97a7421f8ac67f7681d58142
+# https://api.synopticdata.com/v2/auth?apikey=ABC123&disableToken=1672c91e97a7421f8ac67f7681d58142
 
 {
   "MESSAGE": "Token 1672c91e97a7421f8ac67f7681d58142 is disabled."

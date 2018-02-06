@@ -78,4 +78,4 @@ An example JSON response would be:
 <!-- References & URLs -->
 
 [networktypes-lookup]: https://synopticlabs.org/demos/lookup/?lookup=networktypes
-[json]: http://json.org/
+[json]: https://json.org/

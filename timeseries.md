@@ -12,7 +12,7 @@ bannercaption: Time Series API
 A Time Series request is an HTTP URL with the following form:
 
 ```
-https://api.synopticdata.comv2/stations/timeseries?parameters
+https://api.synopticdata.comv2/stations/timeseries
 ```
 
 Acquiring data from this web service requires certain parameters. When encoding URLs, all parameters are separated using the ampersand (&) character and their value is indicated by an equal sign (=). Below is a list of accepted parameters.
@@ -51,13 +51,13 @@ Acquiring data from this web service requires certain parameters. When encoding 
 The following example request all the stations in Utah with an observation within the last two hours:
 
 ```
-http://api.synopticdata.com/v2/stations/timeseries?state=ut&recent=120&token_YOUR_TOKEN_HERE
+https://api.synopticdata.com/v2/stations/timeseries?state=ut&recent=120&token_YOUR_TOKEN_HERE
 ```
 
 The following example requests only the air temperature for KSLC (Salt Lake City Airport) on January 3, 2015:
 
 ```
-http://api.synopticdata.com/v2/stations/timeseries?stid=kslc&start=201501030000&end=201501032359&vars=air_temp&token_YOUR_TOKEN_HERE
+https://api.synopticdata.com/v2/stations/timeseries?stid=kslc&start=201501030000&end=201501032359&vars=air_temp&token_YOUR_TOKEN_HERE
 ```
 
 To get receive an API key click here or to create a token from your key click here.
@@ -99,7 +99,7 @@ If the `qc` parameter is omitted then the API will return data while assuming th
   * "flag name" allows the targeting of a flag by name or a list (comma separated) of flags.
   * "flag source" allows targeting a data check provider i.e. "synopticlabs" for SynopticLabs.
 
-Some common examples of modifiying the default qc parameters are:
+Some common examples of modifying the default QC parameters are:
 
 * `qc_checks=synopticlabs,ma_range_check`, Applies the SynopticLabs test suite and MADIS range check
 * `qc_checks=synopticlabs,madis`, Applies the SynopticLabs and MADIS test suites.
@@ -201,6 +201,6 @@ An example JSON response would be:
 [network-api]: ../networks/
 [epoch-seconds]: https://en.wikipedia.org/wiki/Unix_time
 [iso-8601]: https://en.wikipedia.org/wiki/ISO_8601
-[json]: http://json.org/
+[json]: https://json.org/
 [sl-range-check]: https://synopticlabs.org/api/mesonet/reference/qc/#Range_check
-[strftime]: http://man7.org/linux/man-pages/man3/strftime.3.html
+[strftime]: https://man7.org/linux/man-pages/man3/strftime.3.html

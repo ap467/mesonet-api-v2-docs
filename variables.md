@@ -81,4 +81,4 @@ An example JSON response would be:
 <!-- References & URLs -->
 
 [variables-lookup]: https://synopticlabs.org/demos/lookup/?lookup=variables
-[json]: http://json.org/
+[json]: https://json.org/

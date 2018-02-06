@@ -1,5 +1,5 @@
 ---
-title: Metadata API
+title: Metadata Service
 permalink: /v2/metadata/
 layout: refdoc
 tagline: Returns metadata for a station or set of stations
@@ -10,7 +10,7 @@ tagline: Returns metadata for a station or set of stations
 A Metadata request is an HTTP URL with the following form:
 
 ```
-https://api.synopticdata.com/v2/stations/metadata?parameters
+https://api.synopticdata.com/v2/stations/metadata
 ```
 
 Acquiring data from this web service requires certain parameters. When encoding URLs, all parameters are separated using the ampersand (&) character and their value is indicated by an equal sign (=). Below is a list of accepted parameters.
@@ -109,6 +109,6 @@ An example JSON response would be:
 [station-selectors]: ../station-selectors/
 [epoch-seconds]: https://en.wikipedia.org/wiki/Unix_time
 [iso-8601]: https://en.wikipedia.org/wiki/ISO_8601
-[json]: http://json.org/
+[json]: https://json.org/
 [sl-range-check]: https://synopticlabs.org/api/mesonet/reference/qc/#Range_check
-[strftime]: http://man7.org/linux/man-pages/man3/strftime.3.html
+[strftime]: https://man7.org/linux/man-pages/man3/strftime.3.html

@@ -12,6 +12,6 @@ Data users are also cautioned to consider the provisional nature of the data bef
 
 Authors of research publications that depend upon substantial use of data available via Synoptic Data and MesoWest should acknowledge the data providers by including a statement similar to: This study was made possible in part due to the data made available by (1) a specific source or (2) more generically, governmental agencies, commercial firms, and educational institutions. In addition to acknowledging the providers, two Bulletin of the [American Meteorological Society][bams] articles may also be referenced when appropriate. These articles are Mesowest: [Cooperative Mesonets in the Western United States (Horel et al. 2002)][article1] and [Weather Support for the 2002 Winter Olympic and Paralympic Games (Horel et al. 2002)][article2].
 
-[bams]: http://www.ametsoc.org/pubs/bams/
+[bams]: https://www.ametsoc.org/pubs/bams/
 [article1]: https://journals.ametsoc.org/doi/abs/10.1175/1520-0477%282002%29083%3C0211%3AMCMITW%3E2.3.CO%3B2
 [article2]: https://journals.ametsoc.org/doi/abs/10.1175/1520-0477%282002%29083%3C0227%3AWSFTWO%3E2.3.CO%3B2

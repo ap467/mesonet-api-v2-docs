@@ -1,39 +1,35 @@
 ---
-title: Getting Started with the Mesonet APIs
+title: Getting Started with the Mesonet Web Services
 permalink: /v2/getting-started/
 layout: refdoc
 tagline: How to get started
 ---
 
-This is a crash course for new developers using our APIs.
-
 ## Getting Set up
 
-All of the SynopticLabs APIs use JSON as the default response format. JSON ([JavaScript Object Notation][json]) is the defacto standard of moving data across the web. There are many tools you can use to inspect JSON data, or you can just view the response right in your web browser, but we find it's helpful to install a JSON viewing utility. Some common JSON viewers are:
+All of the Mesonet web services use JSON as the default response format. JSON ([JavaScript Object Notation][json]) is the defacto standard of moving data across the web. There are many tools you can use to inspect JSON data, or you can just view the response right in your web browser, but we find it's helpful to install a JSON viewing utility. Some common JSON viewers are:
 
 * [JSON Viewer for Google Chrome][json-viewer]
 * [JSON Formatter for Microsoft Edge][edge-json]
 * FireFox already has one built in
 
-### Gaining access to the APIs
+### Gaining access
 
-When you [sign up to use the SynopticData API services][sign-up-for-api-key], you will receive an API key. If you already have a key, just skip down to **creating a token**.
+When you [sign up to use the Mesonet API][sign-up-for-service-key], you will receive an API key. If you already have a key, just skip down to **creating a token**.
 
 ### Sign up for a API key
 
-If you do not have an SynopticLabs or SynopticData API key you can sign up for on [here][sign-up-for-api-key]. This is a private key that is used to generate tokens for your applications. You are only assigned one key to your account, so you will want to keep this safe. **Never code this key into your applications**.
+If you do not have an SynopticLabs or SynopticData API key you can sign up for on [here][sign-up-for-service-key]. This is a private key that is used to generate tokens for your applications. You are only assigned one key to your account, so you will want to keep this safe. **Never code this key into your applications**.
 
 ### Creating a token
 
-Once you have an API key, you'll need to generate a token for your projects. You are allowed to create as many tokens as you'd like. In fact we recommend that each application you create uses a different token. Tokens are what we use to authenticate your account when requesting data. If a token becomes compromised, simply delete it and create a new one. Creating tokens is easy with our our [Authentication API][auth-api]. In your web browser copy the following URL and fill in the `YOUR_API_KEY` with the one you received in your email.
+Once you have an API key, you'll need to generate a token for your projects. You are allowed to create as many tokens as you'd like. In fact we recommend that each application you create uses a different token. Tokens are what we use to authenticate your account when requesting data. If a token becomes compromised, simply delete it and create a new one. Creating tokens is easy with our our [Authentication API][auth-service]. In your web browser copy the following URL and fill in the `YOUR_API_KEY` with the one you received in your email.
 
-> When encoding URLs, all parameters are separated using the ampersand (&) and their value is indicated by an equal sign (=).
+> When encoding URLs all parameters are separated using the ampersand (&) and their value is indicated by an equal sign (=). The first parameter is preceded by a question mark (?)
 
 ```
 https://api.synopticdata.com/v2/auth?apikey=YOUR_API_KEY
 ```
-
-<!-- Maybe make a simple applet here to generate a token -->
 
 **Tip:** To see which tokens are associated with an API key, just add the parameter `list=1` to the request.
 
@@ -45,29 +41,29 @@ At this point you should see a response that looks similar the response below. Y
 }
 ```
 
-## Determining which API to use
+## Determining which service to use
 
-When deciding which SynopticLabs API to use, the biggest questions are:
+When deciding which Mesonet service to use the biggest questions are:
 
 * How much data do you need to make the application work?
 * Do you need historical or real-time observations?
 
-The most popular Mesonet APIs are [Time Series][timeseries-api], [Latest][latest-api] and [Nearest Time][nearesttime-api] and [Metadata][metadata-api]. Each fills a certain need and are described below.
+The most services are [Time Series][timeseries-service], [Latest][latest-service] and [Nearest Time][nearesttime-service] and [Metadata][metadata-service]. Each fills a certain need and are described below.
 
-* [Time Series][timeseries-api] (our most popular) returns a sequential series of observations for a requested time span.
-* [Latest][latest-api] returns the most recent observation.
-* [Nearest Time][nearesttime-api] returns the observation nearest to a requested time. Similar to the Latest API but allows for targeting a specific time.
-* [Metadata][metadata-api] returns metadata.
+* [Time Series][timeseries-service] (our most popular) returns a sequential series of observations for a requested time span.
+* [Latest][latest-service] returns the most recent observation.
+* [Nearest Time][nearesttime-service] returns the observation nearest to a requested time. Similar to the Latest service but allows for targeting a specific time.
+* [Metadata][metadata-service] returns metadata.
 
 ## Constructing a request
 
-The Mesonet APIs are [REST APIs][rest-api], meaning that each request is stateless and only represents the arguments within the request. A request is just a URL that contains the URL of the API being requested, a token and any additional parameters. Constructing a request URL is simple. Often the best tool for experimenting with these APIs is just using the address bar of a web browser.
+Mesonet web services are [REST APIs][rest-service], meaning that each request is stateless and only represents the arguments within the request. A request is just a URL that contains the URL of the service being requested, a token and any additional parameters. Constructing a request URL is simple. Often the best tool for experimenting with these services is just using the address bar of a web browser.
 
 > **Note**: For some services such as Latest and Metadata the omission of selection parameters will return data from every available station in the inventory.
 
-The base URL for all SyntopicData/SyntopicLabs APIs is `https://api.synopticdata.com/v2/`. From this point you can access all the public APIs. Now just add the API service you wish to access. This example will use the Time Series service i.e. `stations/timeseries`. Then add parameters to reduce the data returned to what you care to see.
+The base URL for all services is `https://api.synopticdata.com/v2/`. From this point you can access all the public services. Now just add the service you wish to access. This example will use the Time Series service i.e. `stations/timeseries`. Then add parameters to reduce the data returned to what you care to see.
 
-> **Tip** You can quickly look for stations near either a known station or a lat/lon set. For example: `http://api.synopticdata.com/v2/stations/metadata?token=demotoken&radius=33.704,-112.014,10&limit=10` will return the 10 closest stations to a radius of 10 miles of downtown Phoenix, Arizona.
+> **Tip** You can quickly look for stations near either a known station or a lat/lon set. For example: `https://api.synopticdata.com/v2/stations/metadata?token=demotoken&radius=33.704,-112.014,10&limit=10` will return the 10 closest stations to a radius of 10 miles of downtown Phoenix, Arizona.
 
 ```
 // Make sure you view this on a screen wide enough to not word wrap
@@ -88,7 +84,7 @@ https://api.synopticdata.com/v2/stations/timeseries?stid=mtmet,nahu&token=YOUR_T
 Every non CSV request to a Mesonet API will yield a response with at a minimum a SUMMARY section and status code. A Time Series request with the following URL would return a result similar to:
 
 ```
-http://api.synopticdata.com/v2/stations/timeseries?stid=mtmet&start=201701030830&end=201701030930&vars=air_temp,volt&token=YOUR_TOKEN_HERE
+https://api.synopticdata.com/v2/stations/timeseries?stid=mtmet&start=201701030830&end=201701030930&vars=air_temp,volt&token=YOUR_TOKEN_HERE
 ```
 
 ```json
@@ -256,25 +252,25 @@ The first six lines are metadata about this station and they are noted by the co
 
 # Fin
 
-We hope this tutorial has been helpful. If you made it this far, then you've got the basic skills to start exploring the Mesonet APIs and using real-time and historical data in your applications.
+We hope this tutorial has been helpful. If you made it this far, then you've got the basic skills to start exploring the Mesonet services and using real-time and historical data in your applications.
 
 Some further reading:
 
 * [Station Selectors][station-selectors]
-* [Time Series API][timeseries-api]
-* [Latest API][latest-api]
+* [Time Series Service][timeseries-service]
+* [Latest Service][latest-service]
 
 <!-- Refs and such -->
 
 [station-selectors]: ../station-selectors/
-[auth-api]: ../authentication/
+[auth-service]: ../authentication/
 [csv]: https://en.wikipedia.org/wiki/Comma-separated_values
 [edge-json]: https://www.microsoft.com/en-gb/store/p/json-formatter-for-edge/9nz9d2j86w6s
-[json]: http://json.org/
+[json]: https://json.org/
 [json-viewer]: https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc?utm_source=chrome-ntp-icon
-[latest-api]: ../latest/
-[metadata-api]: ../metadata/
-[nearesttime-api]: ../nearesttime/
-[rest-api]: https://en.wikipedia.org/wiki/Representational_state_transfer
-[sign-up-for-api-key]: https://synopticlabs.org/api/signup/
-[timeseries-api]: ../timeseries/
+[latest-service]: ../latest/
+[metadata-service]: ../metadata/
+[nearesttime-service]: ../nearesttime/
+[rest-service]: https://en.wikipedia.org/wiki/Representational_state_transfer
+[sign-up-for-service-key]: https://synopticlabs.org/api/signup/
+[timeseries-service]: ../timeseries/

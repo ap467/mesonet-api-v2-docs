@@ -7,7 +7,7 @@ bannerimage: qcsegments.png
 bannercaption: QC Segments
 ---
 
-## QC Segments Requests
+## Request Format
 
 A QC Segments request is an HTTP URL with the following form:
 

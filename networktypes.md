@@ -5,11 +5,7 @@ layout: refdoc
 tagline: Returns network category metadata
 ---
 
-# Network Types Web Service
-
-> Returns network category metadata.
-
-## Network Types Requests
+## Request Format
 
 ```
 https://api.synopticdata.com/v2/networktypes

@@ -5,7 +5,7 @@ layout: refdoc
 tagline: Returns transmission latency for a station or set of stations based on a start and end date/time.
 ---
 
-## Latency Requests
+## Request Format
 
 A Latency request is an HTTP URL with the following form:
 

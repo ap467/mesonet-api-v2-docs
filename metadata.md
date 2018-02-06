@@ -5,7 +5,7 @@ layout: refdoc
 tagline: Returns metadata for a station or set of stations
 ---
 
-## Metadata Requests
+## Request Format
 
 A Metadata request is an HTTP URL with the following form:
 

@@ -8,13 +8,15 @@ layout: default
   <li><a href="{{site.baseurl}}">Return Home</a></li>
 </ol>
 
-Gain access to over 60,000 surface weather stations mostly in North America. The Mesonet API are easy to use REST API that supports real-time and historical data.
+Gain access to over 60,000 surface weather stations mostly in North America. The Mesonet API is an easy to use REST API that supports real-time and historical data.
 
 If you are new to the Mesonet API please take a second to read our [getting started section][getting-started].
 
 ## Available Web Services
 
-### Data services
+---
+
+### Data
 
 * [Time Series][timeseries-service]
 * [Latest][latest-service]
@@ -22,7 +24,7 @@ If you are new to the Mesonet API please take a second to read our [getting star
 * [Precipitation][precipitation-service]
 * [QC Segments][qcsegments-service]
 
-### Metadata services
+### Metadata
 
 * [Metadata][metadata-service]
 * [QC Types][qc-types-service]
@@ -30,7 +32,7 @@ If you are new to the Mesonet API please take a second to read our [getting star
 * [Networks][networks-service]
 * [Network Types][networktypes-service]
 
-### Analytics & user services
+### Analytics & user
 
 * [Authentication][authentication-service]
 * [Latency][latency-service]

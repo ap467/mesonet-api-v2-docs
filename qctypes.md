@@ -5,7 +5,7 @@ layout: refdoc
 tagline: Returns details about a quality control (data attribute) flag
 ---
 
-## QC Types Requests
+## Request Format
 
 ```
 https://api.synopticdata.comv2/qctypes

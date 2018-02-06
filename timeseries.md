@@ -7,7 +7,7 @@ bannerimage: timeseries.png
 bannercaption: Time Series API
 ---
 
-## Time Series Requests
+## Request Format
 
 A Time Series request is an HTTP URL with the following form:
 

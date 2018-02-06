@@ -5,7 +5,7 @@ layout: refdoc
 tagline: Create and manage tokens to access Mesonet APIs.
 ---
 
-## Authentication Requests
+## Request Format
 
 Interface for account management services. **Should not be used by clients** because it interfaces with your private API key, not tokens.
 

@@ -5,7 +5,7 @@ layout: refdoc
 tagline: Returns metadata and analytics on the networks within the Mesonet dataset
 ---
 
-## Networks Requests
+## Request Format
 
 ```
 https://api.synopticdata.com/v2/networks

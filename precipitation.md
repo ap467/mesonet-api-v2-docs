@@ -5,7 +5,7 @@ layout: refdoc
 tagline: Returns derived precipitation for a station or set of stations based on a time span
 ---
 
-## Precipitation Requests
+## Request Format
 
 A Precipitation request is an HTTP URL with the following form:
 

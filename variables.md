@@ -5,7 +5,7 @@ layout: refdoc
 tagline: Returns a list of the available variables within the Mesonet APIs
 ---
 
-## Variables Requests
+## Request Format
 
 ```
 https://api.synopticdata.com/v2/variables

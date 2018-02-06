@@ -16,8 +16,6 @@ tagline: Ways to filter and discover available weather stations
 * [Climatology API](../climatology/)
 * [QC Segments API](../qcsegments/) -->
 
-**Station Selectors**
-
 These selectors individually or combined to target the desired data.
 
 * `stid` (string), Single or comma separated list of SynopticLabs station IDs. Example: `stid=mtmet,kslc,fps`.

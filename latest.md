@@ -7,7 +7,7 @@ bannerimage: latest.png
 bannercaption: Latest service
 ---
 
-## Latest Requests
+## Request Format
 
 A Latest request is an HTTP URL with the following form:
 

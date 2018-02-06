@@ -7,7 +7,7 @@ bannerimage: latest.png
 bannercaption: Nearest Time Service
 ---
 
-## Nearest Time Requests
+## Request Format
 
 A Nearest Time request is an HTTP URL with the following form:
 

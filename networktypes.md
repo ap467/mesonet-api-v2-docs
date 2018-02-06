@@ -1,5 +1,5 @@
 ---
-title: Network Types API
+title: Network Types Service
 permalink: /v2/networktypes/
 layout: refdoc
 tagline: Returns network category metadata

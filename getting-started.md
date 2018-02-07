@@ -75,7 +75,7 @@ https://api.synopticdata.com/v2/stations/timeseries?stid=mtmet,nahu&token=YOUR_T
                                   ▲                  ▲                ▲         ▲
                                   |                  |                |         |
                                   |                  |          token parameter and token
-                    'stations/latest' API            |
+                'stations/timeseries' service        |
                                       station ID (stid) parameter
 ```
 

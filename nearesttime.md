@@ -1,6 +1,6 @@
 ---
 title: Nearest Time Service
-permalink: /v2/nearesttime/
+permalink: /mesonet/v2/nearesttime/
 layout: refdoc
 tagline: Returns the observation closest to the time requested
 bannerimage: latest.png

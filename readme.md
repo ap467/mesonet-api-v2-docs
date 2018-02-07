@@ -1,6 +1,6 @@
 ---
 title: Mesonet API Web Services
-permalink: /v2/
+permalink: /mesonet/v2/
 layout: default
 ---
 

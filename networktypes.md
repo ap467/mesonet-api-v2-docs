@@ -1,6 +1,6 @@
 ---
 title: Network Types Service
-permalink: /v2/networktypes/
+permalink: /mesonet/v2/networktypes/
 layout: refdoc
 tagline: Returns network category metadata
 ---

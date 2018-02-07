@@ -1,6 +1,6 @@
 ---
 title: Latency Service
-permalink: /v2/latency/
+permalink: /mesonet/v2/latency/
 layout: refdoc
 tagline: Returns transmission latency for a station or set of stations based on a start and end date/time.
 ---

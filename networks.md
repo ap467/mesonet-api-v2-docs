@@ -1,6 +1,6 @@
 ---
 title: Networks Service
-permalink: /v2/networks/
+permalink: /mesonet/v2/networks/
 layout: refdoc
 tagline: Returns metadata and analytics on the networks within the Mesonet dataset
 ---

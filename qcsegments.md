@@ -1,6 +1,6 @@
 ---
 title: Quality Control Segments Service
-permalink: /v2/qcsegments/
+permalink: /mesonet/v2/qcsegments/
 layout: refdoc
 tagline: Returns data for a station or set of stations for a time span
 bannerimage: qcsegments.png

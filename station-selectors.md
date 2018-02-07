@@ -1,6 +1,6 @@
 ---
 title: Station Selectors
-permalink: /v2/station-selectors/
+permalink: /mesonet/v2/station-selectors/
 layout: refdoc
 tagline: Ways to filter and discover available weather stations
 ---

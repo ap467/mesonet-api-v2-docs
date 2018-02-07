@@ -1,6 +1,6 @@
 ---
 title: SynopticLabs Data Checks
-permalink: /v2/quality-control/
+permalink: /mesonet/v2/quality-control/
 layout: refdoc
 tagline: Seamless integration of data and data checks for the `/timeseries`, `/latest` and `/nearesttime` api services
 ---

@@ -1,6 +1,6 @@
 ---
 title: Metadata Service
-permalink: /v2/metadata/
+permalink: /mesonet/v2/metadata/
 layout: refdoc
 tagline: Returns metadata for a station or set of stations
 ---

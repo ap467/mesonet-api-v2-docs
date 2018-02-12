@@ -10,7 +10,7 @@ tagline: Returns transmission latency for a station or set of stations based on 
 A Latency request is an HTTP URL with the following form:
 
 ```
-https://api.synopticdata.com/v2/stations/timeseries
+https://api.synopticdata.com/v2/stations/latency
 ```
 
 This service reports the delay time (in minutes) of an observation received at our ingest servers relative to the observation's timestamp. Due to the nature of computer clock drift and time synchronization, some observations can be received "before they occur". This results in a negative latency value. This can occur from in incorrect time stamp as provided by the station, or (more often than not) natural clock drift.

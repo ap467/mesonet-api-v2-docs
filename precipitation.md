@@ -15,7 +15,7 @@ https://api.synopticdata.com/v2/stations/precip
 
 Acquiring data from this web service requires certain parameters. When encoding URLs, all parameters are separated using the ampersand (&) character and their value is indicated by an equal sign (=). Below is a list of accepted parameters.
 
-* `token` (_required_), You're application's API token. It is recommended that a new token is created for each application, so that you can manage access and quotas.
+* `token` (_required_), Your application's API token. It is recommended that a new token is created for each application, so that you can manage access and quotas.
 * At least one [station selection parameter][station-selectors] i.e. (`stid`, `state`, `network`, `radius`, etc.)
 * Either `start` and `end` or `recent` (one is required by not both)
 * `start` & `end`, Defines the start and end time of the request with the form of **YYYYMMDDhhmm**. Where _YYYY_ is year, _MM_ is month, _DD_ is day, _hh_ is hour, and _mm_ is minutes. The start parameter must be used with the end parameter. For example: `start=201306011800&end=201306021215`.

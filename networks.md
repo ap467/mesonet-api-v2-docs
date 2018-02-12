@@ -17,7 +17,7 @@ _This service returns basic information regarding restricted networks. Meaning y
 
 Acquiring data from this web service requires certain parameters. When encoding URLs, all parameters are separated using the ampersand (&) character and their value is indicated by an equal sign (=). Below is a list of accepted parameters.
 
-* `token` (_required_), You're application's API token. It is recommended that a new token is created for each application, so that you can manage access and quotas.
+* `token` (_required_), Your application's API token. It is recommended that a new token is created for each application, so that you can manage access and quotas.
 
 **Optional Parameters**
 

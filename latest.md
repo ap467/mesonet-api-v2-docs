@@ -29,6 +29,15 @@ Acquiring data from this web service requires certain parameters. When encoding 
 
 * `units` (metric, english, [custom format]), Defines the unit of measure for the data to be returned in. By default all data is returned in metric units. For standard measurements used by many in North America "english" will fill most needs. There is also the ability to support custom unit configurations. This is achieved by accessing the variable group such as "temp" and setting the desired unit using a pipe (`,`) character. The following list describes the available units for each variable group.
 
+  * `temp` (C, F, K), Temperature: Celsius, Fahrenheit and Kelvin.
+  * `speed` (mps, mph, kph, kts), Speed/Velocity: Meters per second, miles per hour, kilometers per hour, knots.
+  * `pres` (pa, mb), Pressure: Pascals, millibars.
+  * `height` (m, ft), Height: Meters, feet.
+  * `precip` (mm, cm, in), Precipitation: Millimeters, centimeters, inches.
+  * `alti` (pa, inhg), Altimeter: Pascals, inches mercury.
+
+  Furthermore, it is possible to modify one of the preset settings (metric/english). This is achieved by appending a variable group and unit to the parameter string with a comma. For example, to use "english" units with altimeter in inHg the parameter would be `units=english,alti, inhg`.
+
 * `within`, Restricts the response to observations to a time window ending at the current observation, i.e. `within=60` would return only observations within the last 60 minutes.
 
 **Response Format Parameters**

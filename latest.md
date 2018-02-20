@@ -36,7 +36,7 @@ Acquiring data from this web service requires certain parameters. When encoding 
   * `precip` (mm, cm, in), Precipitation: Millimeters, centimeters, inches.
   * `alti` (pa, inhg), Altimeter: Pascals, inches mercury.
 
-  Furthermore, it is possible to modify one of the preset settings (metric/english). This is achieved by appending a variable group and unit to the parameter string with a comma. For example, to use "english" units with altimeter in inHg the parameter would be `units=english,alti, inhg`.
+  Furthermore, it is possible to modify one of the preset settings (metric/english). This is achieved by appending a variable group and unit to the parameter string with a comma. For example, to use "english" units with altimeter in inHg the parameter would be `units=english,alti|inhg`.
 
 * `within`, Restricts the response to observations to a time window ending at the current observation, i.e. `within=60` would return only observations within the last 60 minutes.
 

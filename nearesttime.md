@@ -35,6 +35,15 @@ Acquiring data from this web service requires certain parameters. When encoding 
 
 * `units` (metric, english, [custom format]), Defines the unit of measure for the data to be returned in. By default all data is returned in metric units. For standard measurements used by many in North America "english" will fill most needs. There is also the ability to support custom unit configurations. This is achieved by accessing the variable group such as "temp" and setting the desired unit using a pipe (`,`) character. The following list describes the available units for each variable group.
 
+  * `temp` (C, F, K), Temperature: Celsius, Fahrenheit and Kelvin.
+  * `speed` (mps, mph, kph, kts), Speed/Velocity: Meters per second, miles per hour, kilometers per hour, knots.
+  * `pres` (pa, mb), Pressure: Pascals, millibars.
+  * `height` (m, ft), Height: Meters, feet.
+  * `precip` (mm, cm, in), Precipitation: Millimeters, centimeters, inches.
+  * `alti` (pa, inhg), Altimeter: Pascals, inches mercury.
+
+  Furthermore, it is possible to modify one of the preset settings (metric/english). This is achieved by appending a variable group and unit to the parameter string with a comma. For example, to use "english" units with altimeter in inHg the parameter would be `units=english,alti, inhg`.
+
 **Response Format Parameters**
 
 * `timeformat`, Defines a time format that all time stamps in the data response to be formatted to. By default the API will return time values in [ISO 8601][iso-8601] format. This behavior can be changed by passing a string with any valid [strftime][strftime] expression. Below are some common examples.

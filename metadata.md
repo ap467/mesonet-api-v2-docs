@@ -22,7 +22,7 @@ Acquiring data from this web service requires certain parameters. When encoding 
 
 * `complete` (0, 1), Indicates if the complete metadata for the station will be returned. By default only the most common metadata values are returned.
 * `sensorvars` (0, 1), Indicates if the stations sensor information will be returned. If true, then the response will contain a complete list of all the sensors the station has ever owned, regardless if they are currently active. Each sensor element contains a `PERIOD_OF_RECORD` value that describes the period of the sensor being active.
-* `obrange` (start, start,end), Defines the start and end time of the request with the form of **YYYYMMDDhhmm**. Where _YYYY_ is year, _MM_ is month, _DD_ is day, _hh_ is hour, and _mm_ is minutes. The start parameter must be used with the end parameter. For example: `obrange=201306011800,201306021215`. If no end is provided the response will contain all the stations returned from the start until the current time.
+* `obrange` (start, start,end), Defines the start and end time of the request with the form of **YYYYMMDD**. Where _YYYY_ is year, _MM_ is month, _DD_ is day. The start parameter must be used with the end parameter. For example: `obrange=20130601,20130602`. If no end is provided the response will contain all the stations returned from the start until the current time.
 
 **Response Format Parameters**
 

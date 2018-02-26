@@ -48,6 +48,8 @@ Acquiring data from this web service requires certain parameters. When encoding 
 
 * `precip` (1, 0), Enable derived precip. All raw precip variables will be replaced with two new variables called `precip_interval_set_x` and `precip_accum_set_x`. Example: `precip=1`.
 
+* `hfmetars` (1, 0), Returns high frequency (5 minute) observations for many of the stations available in the NWS/FAA network. You can read more about these [here][hfmetar-blog-post]
+
 The following example will request all the stations in Utah with an observation within the last two hours:
 
 ```
@@ -202,3 +204,4 @@ An example JSON response would be:
 [json]: https://json.org/
 [sl-range-check]: https://synopticlabs.org/api/mesonet/reference/qc/#Range_check
 [strftime]: https://man7.org/linux/man-pages/man3/strftime.3.html
+[hfmetar-blog-post]: https://blog.synopticlabs.org/blog/2016/08/29/hf-metars.html

@@ -40,6 +40,8 @@ Acquiring data from this web service requires certain parameters. When encoding 
 
 * `within`, Restricts the response to observations to a time window ending at the current observation, i.e. `within=60` would return only observations within the last 60 minutes.
 
+* `hfmetars` (1, 0), Returns high frequency (5 minute) observations for many of the stations available in the NWS/FAA network. You can read more about these [here][hfmetar-blog-post]
+
 **Response Format Parameters**
 
 * `timeformat`, Defines a time format that all time stamps in the data response to be formatted to. By default the API will return time values in [ISO 8601][iso-8601] format. This behavior can be changed by passing a string with any combination of valid [strftime][strftime] expression. Below are some common examples.
@@ -175,3 +177,4 @@ An example JSON response would be:
 [json]: https://json.org/
 [sl-range-check]: https://synopticlabs.org/api/mesonet/reference/qc/#Range_check
 [strftime]: https://man7.org/linux/man-pages/man3/strftime.3.html
+[hfmetar-blog-post]: https://blog.synopticlabs.org/blog/2016/08/29/hf-metars.html

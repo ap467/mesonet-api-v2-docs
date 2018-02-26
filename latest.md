@@ -40,7 +40,7 @@ Acquiring data from this web service requires certain parameters. When encoding 
 
 * `within`, Restricts the response to observations to a time window ending at the current observation, i.e. `within=60` would return only observations within the last 60 minutes.
 
-* `hfmetars` (1, 0), Returns high frequency (5 minute) observations for many of the stations available in the NWS/FAA network. You can read more about these [here][hfmetar-blog-post]
+* `hfmetars` (1, 0), Returns high frequency (5 minute) observations for many of the stations available in the NWS/FAA network. You can read more about these [here][hfmetar-blog-post].
 
 **Response Format Parameters**
 
